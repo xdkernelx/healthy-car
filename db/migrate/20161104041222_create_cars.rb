@@ -10,6 +10,7 @@ class CreateCars < ActiveRecord::Migration[5.0]
       t.string	:color
       t.string	:transmission
       t.string	:engine
+
       t.timestamps
     end
   end

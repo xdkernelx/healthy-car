@@ -1,4 +1,17 @@
 <h1><%=@issue.title%></h1>
+
+<%= @issue.description %><br>
+<%= @issue.urgency %><br>
+<hr>
+<%= button_to "New Repair", new_car_issue_repair_path(@car, @issue), method: "get" %>
+<% @repairs.each do |repair| %><br>
+<%= repair.title %><br>
+<%= repair.date_completed %><br>
+<%= repair.description %><br>
+<%= link_to "Edit", edit_car_issue_repair_path(@car, @issue.id, repair.id) %><br>
+	<%= link_to "Delete", car_issue_repair_path(@car, @issue), method: :delete %><br><br>
+<% end %>
+
   <%= @issue.description %><br>
   <%= @issue.urgency %><br>
   <hr>
