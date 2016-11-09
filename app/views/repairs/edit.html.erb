@@ -1,0 +1,30 @@
+<% if current_user %>		
+	<h1>Edit repairs:</h1>
+	<%= form_for([@car, @issue, @repair]) do |f| %>
+	<p>
+	  <%= f.label :title%><br>
+	  <%= f.text_field :title %><br />
+	</p>
+	<p>
+	  <%= f.label :mileage%><br>
+	  <%= f.text_field :mileage %>
+	</p>
+	<p>
+	<p>
+	  <%= f.label :date_completed %><br>
+	  <%= f.date_field :date_completed %>
+	</p>
+	<p>
+	  <%= f.label :description%>:<br>
+	  <%= f.text_area :description %><br />
+	</p>
+
+	<%= f.submit "Update Repair", class: "btn btn-primary" %><br><br>
+	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span><%= link_to "Delete", car_issue_repair_path(@car, @issue, :repair => @repair), method: :delete %><br>
+	<% end %><br>
+
+
+<% else %>
+	<h3>You must be logged in to view this page</h3>
+<% end %>
+

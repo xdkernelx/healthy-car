@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 map-left-side">
+  <% if current_user %> 
+  <h4>Issue</h4>
+    <h3><%=@issue.title%></h3>
+      <%= @issue.description %><br>
+    <span>Urgency: <%= @issue.urgency %></span><br><br>
+     <%= link_to "Edit", edit_car_issue_path(@car, @issue.id), class: "btn btn-back-red" %><br><br>
+     <%= link_to 'Back', car_issues_path(@car), class: "btn btn-back-blue" %>
+  </div>
+<% else %>
+  <h3>You must be logged in to view this page</h3>
+<% end %>
+<div class="col-md-6 map-right-side">
+    <h4> Repairs for issue: </h4>
+      <% if mechanic? %>
+        <%= link_to "Add Repair", new_car_issue_repair_path(@car, @issue), method: "get", class: "btn btn-info"  %>
+      <% else %>
+        <%= link_to "Add Repair", new_car_issue_repair_path(@car, @issue), method: "get", class: "btn btn-info" %>
+      <% end %><br>
+        <% @issue.recent_repairs(3).each do |repair| %><br>
+        <%= repair.title %><br>
+        <%= repair.date_completed %><br>
+        <%= repair.description %><br></p>
+        <%= link_to "Edit", edit_car_issue_repair_path(@car, @issue.id, repair.id) %><br>  
+        <% end %>
+  </div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE'] %>&libraries=places&callback=initMap" async defer></script>

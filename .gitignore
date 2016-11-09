@@ -17,12 +17,14 @@ app/models/key.rb
 curriculum/.pygments-cache
 curriculum/public/*
 public/assets
+public/system/cars/*
 *.tmproj
 *~
 \#*#
 .idea/
 ignored/
 .irb-save-history
+.byebug_history
 chromedriver.log
 .tddium*
 bin/

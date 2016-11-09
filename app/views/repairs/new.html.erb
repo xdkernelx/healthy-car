@@ -1,0 +1,35 @@
+<% if current_user %>
+  <h1>New Repair</h1>
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+  	<li><%= error %></li>
+  	<% end %>
+    </ul>
+  <% end %>
+
+  <%= form_for @repair, url: car_issue_repairs_path do |f| %>
+  <p>
+    <%= f.label :title%>:
+    <%= f.text_field :title %><br />
+  </p>
+  <p>
+    <%= f.label :mileage%>
+    <%= f.text_field :mileage %>
+  </p>
+  <p>
+  <p>
+    <%= f.label :date_completed %>
+    <%= f.date_field :date_completed %>
+  </p>
+  <p>
+    <%= f.label :description%>:
+    <%= f.text_area :description %><br />
+  </p>
+
+  <%= f.submit %>
+  <% end %>
+  <%= link_to 'back', car_issue_path(@car, @issue) %>
+<% else %>
+  <h3>You must be logged in to view this page</h3>
+<% end %>

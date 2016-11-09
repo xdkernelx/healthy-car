@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HealthyCar</title>
+    <title>auto-biography</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Play:700,400' type='text/css'>
+    
+    <script type="text/javascript" src="http://iop.io/js/vendor/d3.v3.min.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerEvents/pointerevents.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerGestures/pointergestures.js"></script>
+    <script type="text/javascript" src="http://iop.io/js/iopctrl.js"></script>
+  	<meta charset="UTF-8">
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
   </head>
+	<div class="navbar navbar-default navbar-fixed-top">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <a class="navbar-brand" href="/cars">auto-biography <span class="glyphicon glyphicon-wrench"></span></a>
+	        </div>
+	        <center>
+	        	<div class="navbar-right">
+	        	<% if current_user %>
+							Welcome, <%= current_user.first_name%>. | 
+	        		 <%= link_to 'Home', cars_path %> |
+							 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+				    <% else %>
+		          <div class="navbar-collapse collapse" id="navbar-main">
+			          	<%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do|f| %>
+			        		<div class="form-group">
+			          			<%= f.text_field :email, :placeholder => "Email", class: "form-control" %> 
+			        		</div>
 
+			        		<div class="form-group">
+			          			<%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
+			        		</div>
+			        			<%= f.submit 'Login', class: "btn btn-default" %><br>
+			        		<div class="checkbox">
+			          			<%= f.check_box :remember_me %><%= f.label :remember_me %> |
+                				<%= link_to "Register",  new_user_registration_path%>
+			        		</div>
+						  <% end %>
+		          </div>
+		        <% end %>
+		      </div>
+	        </center>
+	    </div>
+	</div>
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+    <div class="extra-space">
+    </div>
+    <div class="footer">
+      <p>auto-biography</p>
+    </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+<h1>Mechanic landing page  </h1>
+<p>List all of the repairs that the mechanic needs to review</p>
+
+<h2>Need to Create a Repair Report</h2>
+
+
+<h2>Past Repairs</h2>
+
+<ul>
+	<% @mechanic.repairs.each do |repair| %>
+		<li><%= repair.title %></li>
+		<li><%= repair.description %></li>
+		<li><%= repair.mileage %></li>
+		<li><%= repair.date_completed %></li>
+		<li><%= repair.issue_id %></li>
+	<% end %>
+</ul>
+
+<h2>Potential Customer Issues</h2>
+
+<ul>
+	<% @available_issues.each do |issue| %>
+		<%= link_to issue.title, car_issue_path(issue.car_id, issue) %>
+	<% end %>
+</ul>

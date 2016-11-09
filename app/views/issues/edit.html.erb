@@ -1,0 +1,32 @@
+<% if current_user %>
+  <h1>Edit issue:</h1>
+  <%= form_for ([@car, @issue]) do |f| %>
+  <p>
+    <%= f.label :title%>:
+    <%= f.text_field :title %><br />
+  </p>
+  <p>
+    <%= f.label :description%>:
+    <%= f.text_area :description %><br />
+  </p>
+  <p>
+  	Urgency (1 is lowest): 
+    <%= f.radio_button :urgency, '1' %> 
+    <%= f.label :urgency, '1', :value => '1' %>
+    <%= f.radio_button :urgency, '2' %> 
+    <%= f.label :urgency, '2', :value => '2' %>
+    <%= f.radio_button :urgency, '3' %> 
+    <%= f.label :urgency, '3', :value => '3' %>
+    <%= f.radio_button :urgency, '4' %> 
+    <%= f.label :urgency, '4', :value => '4' %>
+    <%= f.radio_button :urgency, '5' %> 
+    <%= f.label :urgency, '5', :value => '5' %>
+    <%= f.hidden_field :car_id, :value => @car.id %>
+  </p>
+  <%= f.submit "Update Issue", class: "btn btn-info" %><br><br>
+  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+  <%= link_to "Delete", car_issue_path(@car, @issue), method: :delete, class: "delete-form" %>
+  <% end %>
+<% else %>
+  <h3>You must be logged in to view this page</h3>
+<% end %>

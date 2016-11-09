@@ -1,0 +1,42 @@
+<div class="container">
+<% if current_user %>
+	<h1>Create new maintenance</h1>
+
+	<% if @errors %>
+		<ul>
+			<% @errors.each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<%= form_for([@car, @car.maintenances.build]) do |f| %>
+		<p>
+			<%= f.label :title %><br>
+			<%= f.text_field :title, value: @maintenance.title %>
+		</p>
+
+		<p>
+			<%= f.label :description %><br>
+			<%= f.text_area :description, value: @maintenance.description %>
+		</p>
+
+		<p>
+			<%= f.label :mileage %>
+			<%= f.number_field :mileage, value: @maintenance.mileage %>
+		</p>
+
+		<p>
+			<%= f.label :date_completed %>
+			<%= f.date_field :date_completed, value: @maintenance.date_completed %>
+		</p>
+
+		<p>
+			<%= f.submit "Create report", class: 'btn btn-primary'%>
+		</p>
+	<% end %><br><br>
+	<%= link_to 'Back', car_path(@car), class: 'btn btn-reverse' %>
+<% else %>
+	<h3>You must be logged in to view this page</h3>
+<% end %>
+</div>

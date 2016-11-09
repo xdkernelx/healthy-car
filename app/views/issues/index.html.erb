@@ -1,0 +1,16 @@
+<% if current_user %>	
+	<h1>Issues for <%= @car.make %> <%=@car.model%></h1>
+	<% @issues.each do |issue| %>
+		<span class="issue-title"><%=link_to issue.title, car_issue_path(@car, issue)%></span><br>
+		<%= issue.created_at %><br><br>
+		<ul>
+			<% generate_url(issue, @car).each do |url| %>
+				<li><%= url %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<%= link_to "New Issue", new_car_issue_path(@car), method: "get", class: "btn btn-info"%><br><br>
+	<%= link_to 'Back', car_path(@car), class: "btn btn-reverse" %><br>
+<% else %>
+	<h3>You must be logged in to view this page</h3>
+<% end %>

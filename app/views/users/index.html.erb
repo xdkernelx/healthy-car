@@ -1,0 +1,94 @@
+<h1><%= current_user.first_name %>'s <%= @car.year %> <%= @car.make %> <%= @car.model %></h1>
+<% if @maintenances.blank? %>
+<% else %>
+  <h2 class="blue-report-header"> MAINTENANCE </h2>
+    <table class="maintenance-report">
+      <tr>
+        <td class="head-td">
+          <h4>Title</h4>
+        </td>
+        <td class="head-td">
+          <h4>Date Completed</h4>
+        </td>
+        <td class="head-td">
+          <h4> Mileage </h4>
+        </td>
+        <td class="head-td">
+         <h4> Description </h4>
+        </td>
+      </tr>
+      <% @maintenances.each do |maintenance| %>
+      <tr>
+        <td class="x-sm-td">
+         <%= maintenance.title %><br>
+        </td>
+        <td class="x-sm-td">
+          <%= maintenance.date_completed %><br>
+        </td>
+        <td class="sm-td">
+          <%= maintenance.mileage %><br>
+        </td>
+        <td class="md-td">
+         <%= maintenance.description %><br>
+      </td>
+      </tr>
+      <%end%>
+  </table>
+<%end%>
+
+<hr>
+
+<h2 class="blue-report-header"> ISSUES</h2>
+<table class="issues-report">
+  <tr>
+  <td class="head-td">
+    <h4>Title</h4>
+  </td>
+  <td class="head-td">
+    <h4>Date Created</h4>
+  </td>
+  <td class="head-td">
+    <h4> Description </h4>
+  </td>
+</tr>
+  <% @issues.each do |issue| %>
+    <tr>
+      <td class="x-sm-td">
+        <%= issue.title %><br>
+      </td>
+      <td class="x-sm-td">
+        <%= issue.created_at %><br>
+      </td>
+      <td class="md-td">
+        <%= issue.description %><br>
+      </td>
+    </tr>
+    <%end%>
+</table>
+<table class="issues-report">
+  <h2 class= "blue-report-header"> REPAIRS </h2></tr>
+  <tr>
+    <td class="head-td">
+      <h4>Title</h4>
+    </td>
+    <td class="head-td">
+      <h4>Date Completed</h4>
+    </td>
+    <td class="head-td">
+     <h4> Description </h4>
+    </td>
+</tr>
+    <% @car.repairs.each do |repair| %>
+    <tr>
+      <td class="x-sm-td">
+        <%= repair.title %><br>
+      </td>
+      <td class="x-sm-td">
+        <%= repair.date_completed %><br>
+      </td>
+      <td class="md-td">
+        <%= repair.description %><br>
+      </td>
+    </tr>
+    <%end%>
+</table>

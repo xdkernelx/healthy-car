@@ -1,0 +1,49 @@
+<h1>Create Account</h1>
+<div class="devise-form-div">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "devise-form"}) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name, autofocus: true%>
+  </div><br>
+  
+  <div class="field">
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name%>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :your_phone %><br />
+    <%= f.text_field :phone%>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, placeholder: "you@something.com" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div><br>
+
+  <div class="field">
+    <%= f.check_box :mech_status, {}, true %> <%= f.label :mech_status, "Check if you are registering as a MECHANIC." %> 
+  </div><br>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: 'btn btn-primary' %><br>
+  </div>
+
+<% end %>
+</div>
+

@@ -1,0 +1,67 @@
+<%= form_for @car, html: { multipart: true } do |f| %>
+ 
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@car.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p><center>
+    <%= f.label :car_image %><br>
+    <%= f.file_field :image %>
+  </center></p>
+
+   <p>
+    <%= f.label :vin %><br>
+    <%= f.text_field :vin %>
+  </p>
+
+
+  <p>
+    <%= f.label :mileage %><br>
+    <%= f.number_field :mileage %>
+  </p>
+
+  <p>
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </p>
+ 
+  <p>
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </p>
+ 
+   <p>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </p>
+
+    <p>
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </p>
+
+    <p>
+    <%= f.label :transmission %><br>
+    <%= f.text_field :transmission %>
+  </p>
+
+    <p>
+    <%= f.label :engine %><br>
+    <%= f.text_field :engine %>
+  </p>
+  <p>
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  </p>
+  
+ 
+<% end %>

@@ -1,0 +1,198 @@
+<div class="container">
+	<% if current_user %>
+	<div class="col-md-4">
+		<h3><%= @car.year %> <%=@car.make %> <%= @car.model %></h3>
+		  <p>COLOR: <%= @car.color %><br></p>
+		  <p>TRANSMISSION: <%= @car.transmission %><br></p>
+		  <p> ENGINE: <%= @car.engine %><br></p>
+	    <div>
+			<span class="glyphicon glyphicon-edit"></span> <%= link_to 'Edit Car Info', edit_car_path(@car) %><br><br>
+		</div>
+		<%= image_tag @car.image.url(:medium) %><br>
+		<%= link_to "Comprehensive History",new_car_maintenance_path(@car) %>
+	</div>
+    <div class="col-md-4">
+        <div class="dashboard-container">
+            <style>
+                .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+            </style>
+
+            <style>
+                body {
+                    font: 16px arial;
+                }
+
+                .unselectable {
+                    -moz-user-select: -moz-none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+
+                /* css formats for the gauge */
+                .gauge .domain {
+                    stroke-width: 2px;
+                    stroke: #199CCC;
+                }
+
+                .gauge .tick line {
+                    stroke: #199CCC;
+                    stroke-width: 2px;
+                }
+
+                .gauge line {
+                    stroke: #5f9ea0;
+                }
+
+                .gauge .arc, .gauge .cursor {
+                    opacity: 0;
+                }
+
+                .gauge .major {
+                    fill: $-accent;
+                    font-size: 20px;
+                    font-family: 'Play', verdana, sans-serif;
+                    font-weight: normal;
+                }
+
+                .gauge .indicator {
+                    stroke: #ffd500;
+                    fill: #000;
+                    stroke-width: 4px;
+                }
+
+                /* css formats for the segment display */
+                .segdisplay .on {
+                    fill: #468966;
+
+                }
+
+                .segdisplay .off {
+                    fill: #ff8c00;
+                    opacity: 0.15;
+                }
+            </style>
+            <div>
+                <span id="speedometer"></span>
+            </div>
+
+            <script>
+                var svg = d3.select("#speedometer")
+                        .append("svg:svg")
+                        .attr("width", 400)
+                        .attr("height", 400);
+
+
+                var gauge = iopctrl.arcslider()
+                        .radius(120)
+                        .events(false)
+                        .indicator(iopctrl.defaultGaugeIndicator);
+                gauge.axis().orient("in")
+                        .normalize(true)
+                        .ticks(12)
+                        .tickSubdivide(3)
+                        .tickSize(10, 8, 10)
+                        .tickPadding(5)
+                        .scale(d3.scale.linear()
+                                .domain([0, 160])
+                                .range([-3*Math.PI/4, 3*Math.PI/4]));
+
+                var segDisplay = iopctrl.segdisplay()
+                        .width(80)
+                        .digitCount(6)
+                        .negative(false)
+                        .decimals(0);
+
+                svg.append("g")
+                        .attr("class", "segdisplay")
+                        .attr("transform", "translate(130, 200)")
+                        .call(segDisplay);
+
+                svg.append("g")
+                        .attr("class", "gauge")
+                        .call(gauge);
+
+                segDisplay.value(<%= @car.mileage %>);
+                gauge.value((<%= @car.mileage %>/60000)*60);
+
+                    console.log(gauge.value);
+            </script>
+            </div>
+        </div>
+<div class="col-md-4">
+    <svg id="fillgauge3" width="80%" height="200" onclick="gauge3.update(NewValue());"></svg>
+        <script language="JavaScript">
+        var config2 = liquidFillGaugeDefaultSettings();
+        config2.circleColor = "#D4AB6A";
+        config2.textColor = "#7D604D";
+        config2.waveTextColor = "#7D604D";
+        config2.waveColor = "#3B2D24";
+        config2.circleThickness = 0.1;
+        config2.circleFillGap = 0.2;
+        config2.textVertPosition = 0.8;
+        config2.waveAnimateTime = 2000;
+        config2.waveHeight = 0.3;
+        config2.waveCount = 1;
+      var gauge3 = loadLiquidFillGauge("fillgauge3", (1 - (<%= @oil_change %>/5000))*100, config2);
+        var config3 = liquidFillGaugeDefaultSettings();
+
+        function NewValue(){
+            if(Math.random() > .5){
+                return Math.round(Math.random()*100);
+            } else {
+                return (Math.random()*100).toFixed(1);
+            }
+        }
+        </script>
+</div>
+</div>
+<% else %>
+	<h3>You must be logged in to view this page</h3>
+<% end %>
+	<div id="tabs">
+	  <ul>
+	    <li><a href="#fragment-1">Maintenance</a></li>
+	    <li><a href="#fragment-2">Issues</a></li>
+	  </ul>
+	  <div id="fragment-1"><br>
+	  	<%= link_to 'Add New Maintenance', new_car_maintenance_path(@car), class: "btn btn-green" %>
+	  	<%= link_to 'Maintenance History', car_maintenances_path(@car), class: "btn btn-back" %><br><br>
+        <hr>
+				<%if @car.maintenances.blank? %>
+					<p class="have-none"> You have no maintenance records. Click 'Add New Maintenance' to begin. </p>
+				<%else%>
+	    		<p> <% @car.recent_maintenances(4).each do |maintenance|%>
+				<div class ="col-md-3">
+	    		<%= maintenance.title %>
+	    	</div>
+	    	<div class="col-md-3">
+	    		<%= maintenance.date_completed %>
+	    	</div>
+	    	<div class="col-md-6">
+	    		<%= maintenance.description %>
+	    	</div><br><br>
+            <hr>
+	    		<%end%>
+	   		</p>
+	   		<%end%>
+	  </div>
+	  <div id="fragment-2"><br>
+	  	<%= link_to 'Add New Issue', new_car_issue_path(@car), class: "btn btn-red" %>
+			<%= link_to 'Issue History', car_issues_path(@car), class: "btn btn-red-outline" %><br><br>
+			<%if @car.issues.blank? %>
+				<p class="have-none"> You have no issue records. Click 'Add New Issue' to begin. </p>
+			<%else%>
+	    	<p><% @car.recent_issues(4).each do |issue|%>
+	    		<%= issue.title %><br>
+	    		<%= issue.description%><br>
+	    		<%= issue.urgency %><br><br>
+	    		<%end%> </p>
+	    	<%end%>
+	  </div>
+	</div><br>
+	 <%= link_to 'Back', cars_path, class: "btn btn-reverse" %>
+</div>
+<script>
+  $( "#tabs" ).tabs({collapsible: true});
+</script>

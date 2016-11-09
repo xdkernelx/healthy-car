@@ -1,0 +1,21 @@
+<h1>My Cars</h1>
+	<div>
+		<%= link_to 'Add Car', new_car_path, class: "btn btn-primary" %>
+	</div>
+
+<% if user_signed_in? %>
+	<% @cars.each do |car| %>
+	<div class="col-md-4">
+	<div class="card">
+	  <%= image_tag car.image.url(:medium) %>
+
+	  <div class="card-block">
+	    <h4 class="card-title"><%= car.year%></h4>
+	    <p class="card-text"><%=link_to car.make, car_path(car)%> <%=link_to car.model, car_path(car)%></p>
+	  </div>
+	</div>
+	</div>
+	<% end %>
+<% else %>
+	<%= @errors %>
+<% end %>

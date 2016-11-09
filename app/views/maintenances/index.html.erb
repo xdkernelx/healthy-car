@@ -1,0 +1,19 @@
+<div class="container">
+	<% if current_user %>
+	<% if current_user.id == @car.user_id %>
+		<h1>Maintenance for <%= @car.make %> <%=@car.model%></h1>
+		<%= link_to "New Maintenance Report", new_car_maintenance_path(@car) %><br><br>
+		<% @maintenances.each do |maintenance| %>
+			<p>Title: <%= maintenance.title%></p>
+			<p>Date completed: <%= maintenance.date_completed %></p>
+			<p> <%= maintenance.mileage %> </p>
+			<p> <%= maintenance.description %> </p>
+		<% end %>
+		<%= link_to 'back', car_path(@car) %>
+	<% else %>
+		<h3>You are not authorized to view this page</h3>
+	<% end %>
+<% else %>
+	<h3>You must be logged in to view this page</h3>
+<% end %>
+</div>

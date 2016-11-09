@@ -1,0 +1,37 @@
+<% if current_user %>   
+  <h1>Create a new issue</h1>
+  <% if @errors %>
+  	<% @errors.each do |error| %>
+  		<%= error %>
+  	<%end%>
+  <%end%>
+
+  <%= form_for @issue, url: car_issues_path do |f| %>
+    <p>
+      <%= f.label :title%>:
+      <%= f.text_field :title %><br />
+    </p>
+    <p>
+      <%= f.label :description%>:<br>
+      <%= f.text_area :description %><br />
+    </p>
+    <p>
+    	Urgency (1 is lowest):<br>
+      <%= f.radio_button :urgency, '1' %> 
+      <%= f.label :urgency, '1', :value => '1' %>
+      <%= f.radio_button :urgency, '2' %> 
+      <%= f.label :urgency, '2', :value => '2' %>
+      <%= f.radio_button :urgency, '3' %> 
+      <%= f.label :urgency, '3', :value => '3' %>
+      <%= f.radio_button :urgency, '4' %> 
+      <%= f.label :urgency, '4', :value => '4' %>
+      <%= f.radio_button :urgency, '5' %> 
+      <%= f.label :urgency, '5', :value => '5' %>
+      <%= f.hidden_field :car_id, :value => @car.id %>
+    </p>
+    <%= f.submit "Submit Issue", class: 'btn btn-primary'  %>
+  <% end %><br><br>
+  <%= link_to 'Back', car_path(@car), class: 'btn btn-reverse' %>
+<% else %>
+  <h3>You must be logged in to view this page</h3>
+<% end %>

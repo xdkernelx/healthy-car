@@ -1,0 +1,2952 @@
+commit 7a6275b6aa23ba48149c7a937439ab1afd798d2c
+Merge: c5c5d59 99c1040
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 12:30:08 2016 -0800
+
+    Merge pull request #79 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 99c10402c86991f6bfdc4c26aa2fcc410b08bc37
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 12:29:31 2016 -0800
+
+    Add schema picture to our public folder.
+
+commit 481df6fdd255fb7827f11b0283ab4cfcb22bee61
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 12:29:15 2016 -0800
+
+    Modify the README to display our schema.
+
+commit c5c5d59e70210f8dbb5a13dce9375a885b317dfa
+Merge: 39b9acb 5c1be73
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 12:21:41 2016 -0800
+
+    Merge pull request #78 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 5c1be7304b84d01e26ed3962f346ab1a80cee14a
+Merge: 00b9b81 39b9acb
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 12:16:02 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 00b9b81714491895f89997bfc8a8312f57145d8c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 11:43:11 2016 -0800
+
+    Add helper method to return all the repairs specific to the car while differentiating between repairs associated through either the ticket model and the issue model.
+
+commit 39b9acbe43f60f957b6cc2939c7b93a900679bdf
+Merge: 80474d2 161c88f
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Tue Nov 8 11:42:21 2016 -0800
+
+    Merge pull request #77 from xdkernelx/car_show
+    
+    Mal Work on comprehensive history page. Merge to development
+
+commit 80474d2f3ace3ff839e61f96852185e171d571c8
+Merge: 8b2ade6 5a9671b
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Tue Nov 8 11:42:01 2016 -0800
+
+    Merge pull request #76 from xdkernelx/db-testing
+    
+    Nestor Add Shop, Ticket, and Comment models. Merge to development
+
+commit c5005c8fc9efdf0169c950b46ef2028baece3db8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 11:37:25 2016 -0800
+
+    Modify the tests to reflect polymorphic assocations.
+
+commit d23a1d47663792ce6456312fd742580789663f88
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 11:32:34 2016 -0800
+
+    Change the test to reflect the fact that we have a repairable parent, not specifical an issue.
+
+commit 161c88fc412e80449d8509ae826a5943e6db7565
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Tue Nov 8 11:31:57 2016 -0800
+
+    Work on comprehensive history page
+
+commit 427b5b5c86fd2bf20100ebb91daf3c9bd8ee1ce6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 11:29:12 2016 -0800
+
+    Changed Repairs to be polymorphic. Change the tests to reflect this change.
+
+commit 689556014153f77c7e7fd96360c0cb40c2f45d0d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 11:13:05 2016 -0800
+
+    Finish base for Ticket model.
+
+commit 3fd5f288d5104c32aa3d02d3f145acbefdf085e2
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 10:50:51 2016 -0800
+
+    Refactor our tests, assocations, and migrations to convert the mechanic_id into shop_id.
+
+commit 69f42506349d06a5170cc909592d79de25ff6024
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 10:01:57 2016 -0800
+
+    Add tests to see if polymorphic assocations are working. Check if the commentable_type is being passed in.
+
+commit 4033146a9d5df463c27f9d60e304097df3229e44
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 09:55:54 2016 -0800
+
+    Add assocation to the parent classes of comments.
+
+commit 4bc769b378fd206205c893958e8a92755c2a12b2
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 09:49:57 2016 -0800
+
+    Link User <> Shop <> Comments
+
+commit 331c128bae863ca9b3a05f61e887e76eff545924
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 09:45:19 2016 -0800
+
+    Modify the Comment class to have a commentable_type as well, add association to the Shop class to have multiple comments.
+
+commit 5a9671b2b9798ae4a94bc57cb1134b136569d57a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 04:36:14 2016 -0800
+
+    Add fields to destroy all existing tables independent of the test run. Add basics tests to Comment model.
+
+commit 31d2f7fb7f7c29c496a6e760e4bec80362568825
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 03:27:47 2016 -0800
+
+    Write fields for Comment migration.
+
+commit 67891a30fdec04cce04fb924e703f95c1984bd5d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 03:26:06 2016 -0800
+
+    Create files post-Comment generation.
+
+commit ebd5cbe810d5929dd3fdee2e57acf733cc25a105
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 03:25:34 2016 -0800
+
+    Constraints aren't all that. We don't need to check much until we connect tables through associations.
+
+commit 7598fce550c5706c2baead2d175ae21b83c0080b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 03:17:02 2016 -0800
+
+    Destroy any and all Ticket models from all rspecs.
+
+commit 05b6cb1b0708eb37d2b3a08eb2def19bb8be9d98
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 03:13:43 2016 -0800
+
+    Modify the fields inside the migration file. public_access improperly named.
+
+commit 6ab1b7a5a6fb1b61c2d830517656843737721ef5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:53:24 2016 -0800
+
+    Add basic validations for Ticket model.
+
+commit b59087e3ab916c3b22c5464205c03c4267699b45
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:52:33 2016 -0800
+
+    Write needed fields for the Ticket model.
+
+commit bc3e76e38ff9fab83ccd46bc52d89d581f6e6a23
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:50:11 2016 -0800
+
+    Create files post-Ticket generation.
+
+commit 302b22d2cd1d5103e5c8dd327f149da2e5783a3c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:49:11 2016 -0800
+
+    Add validation tests for Shop model. Ensure that all the tests drop all the tables before running the before(:all) command.
+
+commit b5188a927ea43d3f4b84a2e540029ee5569fe9a6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:34:59 2016 -0800
+
+    Write tests for state and zip_code validations.
+
+commit ae69b20d7b93bd5cd585ab98baed7ca5f1737050
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:21:13 2016 -0800
+
+    Add validations for the Shop class.
+
+commit f16f0ed4d59eebc784f74522f11988f10db92a28
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 02:12:18 2016 -0800
+
+    Create files post-Shop generation.
+
+commit c7a3f0e9480dd76d2fe502e1ef4c72b955004571
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 01:22:11 2016 -0800
+
+    Fix testing bug that was preventing Travis from passing.
+
+commit 7dd0c06e9a6b86f1edcf863db5db2e5e8f421f76
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 01:03:55 2016 -0800
+
+    Change the order of the tests to see what Travis does.
+
+commit 576f2bef552f2f9b4c892f72b7e4c6613dbba2b4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 00:51:45 2016 -0800
+
+    Add tests for Car::recent_maintenances.
+
+commit a6f7b0429906000fc9beae14b6979f0583754164
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 00:49:11 2016 -0800
+
+    Add tests for Car::recent_repairs.
+
+commit 1220b69bcfa41cba6a4482ccc76dcaac577b0de1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Tue Nov 8 00:39:32 2016 -0800
+
+    Add tests for Car::recent_issues
+
+commit 8b2ade6ace5bba29699ad47a19b1c392d92d9834
+Merge: f7c473a ca6145b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 23:59:50 2016 -0800
+
+    Merge pull request #75 from xdkernelx/css_edits
+    
+    Verification process complete. Merge to development granted.
+
+commit ca6145bdf9808aa2bb2cea88b53cb7c08a02fd3b
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 23:28:04 2016 -0800
+
+    Add car model methods to display five most recent
+
+commit 74e2ac8f7de6365700e9d7aeb09b3a8ab3df9a6d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 23:22:17 2016 -0800
+
+    Working on methods to show five most recent for maintenance, repairs, and issues
+
+commit f7c473ad91adb554f6f35713ef0da894e93e0592
+Merge: 2ae6439 4d2402c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 22:23:30 2016 -0800
+
+    Merge pull request #74 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit 4d2402c6b019f84435a1ecf7eef4e90f10244d16
+Merge: 8016620 2ae6439
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 22:18:42 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into database-integration
+
+commit 2ae6439a83af92cc80b54aa65454daeafb9d0802
+Merge: 1cf4cd2 a3d1368
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 22:00:53 2016 -0800
+
+    Merge pull request #72 from xdkernelx/map-branch
+    
+    Verification process completed. Merge to development granted.
+
+commit a3d13686505d58831e11d0849902a94f8e670e3d
+Merge: 6be332f 1cf4cd2
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:56:42 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into map-branch
+
+commit 8016620f2bd00764141d0d1bc67d5fb862a78afb
+Merge: a58d582 6be332f
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:55:51 2016 -0800
+
+    Merge branch 'map-branch' of https://github.com/xdkernelx/auto-biography into database-integration
+
+commit 1cf4cd239df79a1555fd5682382af0981a9957ef
+Merge: d1abbca a58d582
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:54:31 2016 -0800
+
+    Merge pull request #73 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit a58d582cadb67f8df9282e39df78a4f65725bc72
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:50:13 2016 -0800
+
+    Fix missing end for a context/
+
+commit 6be332f7360415436c2277f8b25be65c8c4ddfb7
+Merge: 6303679 d1abbca
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Mon Nov 7 21:47:42 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into map-branch
+
+commit 4b38268068be9ddd13ff3fcd1c5ead7b2ec96278
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:46:03 2016 -0800
+
+    Solve merge conflict.
+
+commit 6303679ddb93a8a87f6241649a4ed983f1cf9186
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Mon Nov 7 21:35:29 2016 -0800
+
+    transfer google maps api to new js and scss files
+
+commit d1abbca907083fed1b231271febd64c23731d6c2
+Merge: f5d14bc cb466b3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:29:31 2016 -0800
+
+    Merge pull request #71 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit cb466b3fbfdf51ceb110939f4af617ab49f13bb2
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:28:29 2016 -0800
+
+    Add a code-climate badge.
+
+commit fae1759a8edc27e7bda1d0c376ee454b103fbe50
+Merge: 445a6ba f5d14bc
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 21:06:54 2016 -0800
+
+    test-branch
+
+commit f5d14bc50c81fd1fb1a1a1b9ef35bfb330388941
+Merge: 22281b0 62f7b29
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 20:28:05 2016 -0800
+
+    Merge pull request #70 from xdkernelx/css_edits
+    
+    mal's small edits on css, merge to development
+
+commit 62f7b290b9f95ecbbb322c5eb75db74d4293ee8a
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 20:24:51 2016 -0800
+
+    Add vertical scroll to top two sections on issues show page
+
+commit 734844965662f14b3658e5c1fd639d11fa7bc618
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 20:08:13 2016 -0800
+
+    Additional css edits
+
+commit 22281b019829b4cbb135a3565b9065556239f947
+Merge: 0a807cd c4108f1
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 19:45:52 2016 -0800
+
+    Merge pull request #69 from xdkernelx/css_edits
+    
+    Fix syntax error for login button
+
+commit c4108f114b4e8ae704310a581b447e3d3d76f397
+Merge: a3e8d5b 0a807cd
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 19:37:54 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 0a807cdc9d526c517b3572cb7c1e31afab0c5df7
+Merge: 1982a86 7080bac
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 19:37:46 2016 -0800
+
+    Merge pull request #68 from xdkernelx/css_edits
+    
+    Add text for users with no maintenance or issues added
+
+commit a3e8d5b593d129ad617afd77920d09c5b7ddb4a3
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 19:37:32 2016 -0800
+
+    Restore login button
+
+commit 7080bac09d8712a7d374bc2e6e05ab395d005e2d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 19:30:08 2016 -0800
+
+    Italicize empty field
+
+commit 130d9c0de14b0fa5b1cdc92f4f3896fbc748ce45
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 19:28:38 2016 -0800
+
+    Add logic for car show page if maintenance and issues are blank
+
+commit 1982a8606e78aa922d3c47dda5e05ff527cdfbdf
+Merge: 9238eaf dc3b353
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 19:04:17 2016 -0800
+
+    Merge pull request #67 from xdkernelx/css_edits
+    
+    Verification process complete. Merge to development granted.
+
+commit dc3b3532da3e2f6d0a9099f2a690f3af4abc7f3b
+Merge: 7ff85ad 9238eaf
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 18:59:21 2016 -0800
+
+    Fix merge conflict
+
+commit 7ff85adec7c6936b1f377024891ab1e4c7050861
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 18:53:37 2016 -0800
+
+    Updated css for map page
+
+commit 9238eaf3418357a9fe84480398bd73a0d79e0f27
+Merge: a5cf2b9 3727c27
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 18:31:39 2016 -0800
+
+    Merge pull request #66 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 3727c2732b7da2ef57aae29ad8060d10d9d61cca
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 18:27:06 2016 -0800
+
+    Add tests for Permission class to verify it's parent associations.
+
+commit dfd8816fcc737b6142327c7acd0cb290d00b7b21
+Merge: 95f337a a5cf2b9
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 18:23:42 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 95f337a3f809639a8b222add6f1057788e0e346a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 18:23:36 2016 -0800
+
+    Testing for Permission table semi-complete. We verify that if an issue_id is given, that Issue must exist AND it's parent Car association matches the car_id that is given to us.
+
+commit c5fc92055f4e8d21521cdd6ebd402ea4c6d2459a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 17:43:50 2016 -0800
+
+    Modify the rspecs to take into account for the new field in both types of reports.
+
+commit cc231947a23f3526b0bd73d6caa57ae3a087159c
+Merge: c51a43b a5cf2b9
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 17:34:55 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit c51a43b335a1b1ab49f3a29e25c98e04fa98ddce
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 17:34:51 2016 -0800
+
+    Edits on map page
+
+commit a5cf2b9dcb0a6d68ec82817e81b2e53289ccbc69
+Merge: 7e0c4f2 37164da
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 17:34:36 2016 -0800
+
+    Merge pull request #65 from xdkernelx/db-testing
+    
+    Create permission table
+
+commit 37164da2c0f09053a8624df26654d93f781cf640
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 17:30:43 2016 -0800
+
+    Write the basic validations for our Permission table. Reference to car mandatatory, reference to issue is optional, may need to do a custom validation.
+
+commit 3436accb115e8a7b1d70fabd0f9fec99d5c62ed3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 17:27:29 2016 -0800
+
+    Write the fields needed for our Permissions table.
+
+commit 055c72436fad953de88e5c92f045745c9c02999c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 17:25:54 2016 -0800
+
+    Create files post-Permission generation.
+
+commit 7e0c4f29dd4ef44f8179876abbf2eb01943e0c2f
+Merge: 91a5eb6 52edf37
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 17:03:17 2016 -0800
+
+    Merge pull request #64 from xdkernelx/css_edits
+    
+    Css edits
+
+commit 52edf37966a958ad3a7fde383d5b1c35a4b202df
+Merge: 37bf597 91a5eb6
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 16:11:37 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 37bf597c55b301ecb0a5c71a548c4ba270e9f00e
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 16:11:32 2016 -0800
+
+    Make styling changes, update car index page and buttons for forms
+
+commit 91a5eb6effb121b6185141ee32aa6bf5d8cfd6d4
+Merge: f6db9aa 0151879
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 16:10:38 2016 -0800
+
+    Merge pull request #63 from xdkernelx/db-testing
+    
+    Finalize testing for 5 core models.
+
+commit 015187992245ce67440d81bdca7e6069ef5a6c82
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 15:18:27 2016 -0800
+
+    Maintenance testing complete. Associations (parent and parents-child) and field validations complete.
+
+commit 57b592718a32f385210ed07fb19e7d14a2f81222
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 15:12:36 2016 -0800
+
+    Repair testing complete. Assocations (parent) and field validations complete.
+
+commit 0bc2f7c9b7ff115972adc11c9cd114eb2fdf5f02
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 15:05:18 2016 -0800
+
+    Modify several specs to destroy every single type of exisiting rows in the DB. Finalize testing for the Issue class. Assocations (child and parent) and field validations complete.
+
+commit 916651e9b1f8dcd1e2353abd7cd9264e6f8f8425
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:56:09 2016 -0800
+
+    Car model testing complete. Assocations (parent and child) and field validations done.
+
+commit 5e4dbd0e75b6076de31f5220a71322cf1f746cd0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:41:58 2016 -0800
+
+    User class testing complete. Associations and field validations done.
+
+commit 7176baf4a742b06e5208763c3d993e462122692a
+Merge: 2a80b02 f6db9aa
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:32:58 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 2a80b02114bad0380c0c7b47acaf7b528b12f4ab
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:32:49 2016 -0800
+
+    Add tests that make sure there is a difference between maintenances through a car and non-specific to a car.
+
+commit 14127e22f3cd38d83af82894710aab80257e95eb
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:28:58 2016 -0800
+
+    Add some tests that make sure that our associations work as intended and we know the difference between the entirety of repairs and issues non-specific to a car.
+
+commit f6db9aa8c691bd3ddc90294a64254370a4775674
+Merge: be88d93 e0983bd
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 14:08:45 2016 -0800
+
+    Merge pull request #62 from xdkernelx/new-branch
+    
+    Verification process complete. Merge to development granted.
+
+commit e0983bd5fae0b773b9396203b5306d80e8ad9b8a
+Merge: 60508e7 be88d93
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Mon Nov 7 13:55:28 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into HEAD
+
+commit 60508e79f634eb8ff960b8c5fedeb3fd8942ee57
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Mon Nov 7 13:55:23 2016 -0800
+
+    Modify the show to show a Google Map.
+
+commit be88d93cf1dc192bf2a31a4020617d5f7e827e84
+Merge: 474c186 305a9cc
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 12:51:04 2016 -0800
+
+    Merge pull request #60 from xdkernelx/css_edits
+    
+    Css edits
+
+commit 305a9cc4f3914fa81a1f037be75d6b0b38db7a92
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 12:46:38 2016 -0800
+
+    Add buttons to the tab show page
+
+commit ae45968c89d6b040722d3fc673fc56accfc3e586
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 12:30:11 2016 -0800
+
+    Add buttons to tabs
+
+commit f8daf107ae113bf9a32d2467d5da3f2082b833f4
+Merge: e25bcba 474c186
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 12:08:37 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 474c18644681de569b5d0272d6c26fb17bbe18be
+Merge: 3d4b616 93fbc94
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 11:58:23 2016 -0800
+
+    Merge pull request #59 from xdkernelx/db-testing
+    
+    Mechanic_id option, custom validation only runs if one is supplied
+
+commit e25bcba6ddda031af175c7d1609a328ecc1c934a
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 11:58:20 2016 -0800
+
+    Css small edits
+
+commit 93fbc94704a68cc557caa317888d8a14e46034a6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 11:47:56 2016 -0800
+
+    Uncomment the rating field inside both Maintenace and Repairs.
+
+commit e16f0204e88f25730b4dad3d05e32ffb47e3cafe
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 11:44:31 2016 -0800
+
+    Make the mechanic_id optional, make the custom validation run only if there is a supplied mechanic_id.
+
+commit 3d4b6161eb5574d38f1d84d72fb31889de111e0a
+Merge: 1d31051 67604dc
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 11:31:05 2016 -0800
+
+    Merge pull request #58 from xdkernelx/css_edits
+    
+    Verification process complete. Merge to development granted.
+
+commit 67604dc7491a79ad40150ee71557cdb73bba8f06
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 11:29:40 2016 -0800
+
+    Fix add car div issue
+
+commit 1d310514cd56cdaf440519e7962478da81d7c867
+Merge: 4694399 5e3855f
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 11:20:04 2016 -0800
+
+    Merge pull request #56 from xdkernelx/devise-hacking
+    
+    nestor added custom validations to both types of reports, merge to development
+
+commit 46943990235b0c0f646853bc9fc6654d51493698
+Merge: c80f92e b9569cf
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 11:19:04 2016 -0800
+
+    Merge pull request #57 from xdkernelx/css_edits
+    
+    mal added style to new car page, merge to development
+
+commit 5e3855f4ca1d9735d08743343fc00b94a4eec6db
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 11:16:50 2016 -0800
+
+    Modify the user class to have shortcuts for the associations.
+
+commit b9569cfdae91649c9a738af6b53833b142b32ab1
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 11:15:24 2016 -0800
+
+    Add style to new car page
+
+commit 0132a60ae690995ca1a72633da1cdba5e226d6f8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 11:05:52 2016 -0800
+
+    Fix duct tape solution in tests. We were not creating valid Repair objects because the mechanic_id was not a mechanic user.
+
+commit bed465d4e7b9a1499dcf2bef64f2b6d710403de4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 10:47:17 2016 -0800
+
+    Remove custom mileage validation.
+
+commit bebebbee08f3636083e3429055be6070408dd447
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 10:26:39 2016 -0800
+
+    Remove byebug. Was causing issues for Travis.
+
+commit 0f93b1c16aeeab7c7329d928d534f9bb41677f28
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 10:22:46 2016 -0800
+
+    Change the rspecs to make associations pass. NOTE: There is something wrong with our Issue >> Repairs associations.
+
+commit 9a2c0d3becafee2b06044300753457d25a8156c3
+Merge: b96cee7 c80f92e
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 10:04:44 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into devise-hacking
+
+commit b96cee77f1416973c51140fbda4720587f71de6c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 10:04:33 2016 -0800
+
+    Add custom validation to make sure that the mechanic or owner don't modify the report in a way that make it so that the mileage is lower than the initial state of the car's inherent mileage.
+
+commit c80f92eca7cb8c98d3861ec31a56da375c536852
+Merge: 15b4185 5943ceb
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 09:42:54 2016 -0800
+
+    Merge pull request #55 from xdkernelx/css_edits
+    
+    mal Css edits. merge to development
+
+commit 98e8cd62366f909aa088023627b1afd4443f60b3
+Merge: 7e068fd 15b4185
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 09:41:04 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into devise-hacking
+
+commit 7e068fdd6c6f520690e7ebe1fa92799c46a3469b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 09:40:56 2016 -0800
+
+    Copy-paste custom validation from Maintenance type into Repair type. TODO custom validation for mileage.
+
+commit 5943ceb08d228628bd8f1e3f2d084316d99b7f7c
+Merge: 98672a5 15b4185
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:40:10 2016 -0800
+
+    Fix merge conflict
+
+commit 15b4185a1799e049a14edaa56e5389d7e51e8bbf
+Merge: dd9dac5 f15c358
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:39:36 2016 -0800
+
+    Merge pull request #54 from xdkernelx/test-repair
+    
+    fix the car show page to not include the user restriction conditional
+
+commit 106950a1a61d64d5496378192afd74938c01d1e0
+Merge: fb000b9 dd9dac5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 09:39:35 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into devise-hacking
+
+commit fb000b9b3bd3a929c85ea29304f46a11e8a29c4a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 09:39:28 2016 -0800
+
+    Add a custom validation that checks whether the given mechanic_id belongs to a mechanic User.
+
+commit 98672a58b4419b9552acf2141fb7e0f8451ec669
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:39:08 2016 -0800
+
+    Fix tab css
+
+commit f15c358c0f0c6274c9821d990593fa066b63ba72
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 09:37:51 2016 -0800
+
+    fix the car show page to not include the user restriction conditional
+
+commit ba1cd2b06918bf3a4b35a94c5f13e27cc720c724
+Merge: 63d01c4 dd9dac5
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:32:46 2016 -0800
+
+    Merge conflict resolved
+
+commit 63d01c46ce637b84cb3ed1297f09e5f8882fff12
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:31:14 2016 -0800
+
+    Fix font color in footer
+
+commit dd9dac59a4b9ab94c32460705c02a8b10d4077f7
+Merge: c107d14 61ea585
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 09:29:54 2016 -0800
+
+    Merge pull request #53 from xdkernelx/test-repair
+    
+    Verification process complete. Merge to development granted.
+
+commit 61ea585c202b4e284f82971b33791d354a8ec74b
+Merge: 2f22810 c107d14
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 09:27:31 2016 -0800
+
+    fix merge conflicts in the car show file in the test-repair branch
+
+commit cecf8c1f382edb06218db3b5715d48c2bf3c7ac6
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Mon Nov 7 09:23:26 2016 -0800
+
+    current tab fix
+
+commit 2f22810baac4265710e267a9dd745b6276dda193
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Mon Nov 7 09:15:10 2016 -0800
+
+    changed mechanic to be optional true in the maintenance model, mechanic can create a repair in issues, a user has an option to allow all mechanics to view their issue, mechanic cannot see other repairs made but user can
+
+commit c107d141bdf92d6d3a201e66694296ee4cccef33
+Merge: 38c3b06 c1b204c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 08:42:04 2016 -0800
+
+    Merge pull request #52 from xdkernelx/devise-hacking
+    
+    Verification process complete. Merge to development granted.
+
+commit c1b204cdf3e23f9b64800d83e2c03b3f4d42d0d7
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 08:40:57 2016 -0800
+
+    Modify the tests to ensure that everything is OK.
+
+commit 67b29e671419044aafc15b7da628328e96ba1464
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 08:31:39 2016 -0800
+
+    Change several rspecs to have a before(:all) call instead of a before :each.
+
+commit 765fde42c70c7dab13902728f8c2c3c61a66e56d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 08:28:11 2016 -0800
+
+    Modify the rspecs to take into account for the new field in both types of reports.
+
+commit 30f68003f8f8d2bcc8e0c28706fdaf3ea01acc37
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Mon Nov 7 08:24:29 2016 -0800
+
+    Modify the tests since the model now calls for a mechanic_id.
+
+commit 7c709d44ac22482fabefe75b42a2edf872eeae99
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 23:23:59 2016 -0800
+
+    mechanics can see available issues on their landing page
+
+commit 38c3b0620caddfdcbd9dcc528d06215f5d9da666
+Merge: 52d7fd4 6d6acc5
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 23:17:19 2016 -0800
+
+    Merge pull request #51 from xdkernelx/css_edits
+    
+    mal did some css edits. Merge to development
+
+commit 6d6acc5515ced4c5e9cea0e93b2788bb3fa1f654
+Merge: 6e5617f 52d7fd4
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 23:13:28 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 6e5617f4de6081977f1f1ea25a8da6c3ed9ddf1b
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 23:13:22 2016 -0800
+
+    Work on tabbed interface
+
+commit deb5a174fefb5b21f4f2a1ec2e01b3c4c732356e
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 22:45:14 2016 -0800
+
+    remove the extra restriction on most of the views that only the user who created can view it
+
+commit 398a6e5f89fcf9bb5749467cb54a0f570e2b6b0e
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 22:24:43 2016 -0800
+
+    Add jquery for tabs
+
+commit ab6bd7f03919ff6a4f1e5d3439bce89bb77f1b1f
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 22:12:14 2016 -0800
+
+    Add tab functionality
+
+commit 9236bbf9a9aa5fc2835519d2be1cc7cb0415776f
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 22:00:24 2016 -0800
+
+    mechanic cannot add, edit, or delete issue will only see the issue title link
+
+commit 5893795509215a00b3368a7eacd9996c889c68a8
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 21:49:04 2016 -0800
+
+    customer can make multiple repairs, mechanic can visually only make one repair, mechanic can see past repairs on landing page
+
+commit c0d41c57f67cd6257f8816e44be67cb98bc1ecb0
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 20:55:05 2016 -0800
+
+    Add h1 for devise headers
+
+commit 52d7fd455e5a3cc7371789815e77006692ab5450
+Merge: e2399b4 9a60533
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 20:03:23 2016 -0800
+
+    Merge pull request #50 from xdkernelx/mechanic_devise
+    
+    merging anyway even though travis doesn't like
+
+commit 9a60533726c197cce9dec57dacc42af7dd1e3e78
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 19:57:43 2016 -0800
+
+    Add mech_status things
+
+commit 8421b738fdc01b04f6101530a17a79bfb1bc1a2d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 17:55:29 2016 -0800
+
+    Add important changes
+
+commit e2399b45b63ec9ff08df2eb7cd6a175db0dfb8ce
+Merge: d6b001c 226a1dd
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sun Nov 6 17:05:44 2016 -0800
+
+    Merge pull request #49 from xdkernelx/car-branch
+    
+    Verification process complete. Merge to development granted. -xdkernelx
+
+commit 226a1dddb8e315af17e42b71c4a12e641b3b22fc
+Merge: 862da4a d6b001c
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 17:04:04 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into car-branch
+
+commit 862da4ac817d5260a6a60183fb5aa5275ab07b62
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 17:00:20 2016 -0800
+
+    add vin look up feature to pre populate new car form with data from API
+
+commit 8db15233e66713dc7e5ea97af785cf0faace7d68
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 16:50:08 2016 -0800
+
+    Add mechanic ID to repairs and maintenance tables
+
+commit d6b001c3b2fa1920187af9cf96802424b8e108c8
+Merge: b363a37 9ced899
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 16:41:42 2016 -0800
+
+    Merge pull request #48 from xdkernelx/devise-hacking
+    
+    Verification process complete. Merge to development granted.
+
+commit 9ced899b800f9f7a1c877d72b6d102d930403640
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 16:40:24 2016 -0800
+
+    Modify the README file so that we can see our lovely Travis Build status.
+
+commit 312bedc08902c9813a2e4b5bd97a5f59e3c0873c
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 16:08:05 2016 -0800
+
+    Fix mechanics routes
+
+commit b363a373d98ee443efab07323dea08dec8ec8159
+Merge: f1a0d2f fae03b4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 16:06:37 2016 -0800
+
+    Merge pull request #47 from xdkernelx/devise-hacking
+    
+    Verification process complete. Merge to development granted.
+
+commit fae03b4172c65768fff7fa390bfb37a3be38c442
+Merge: b7bf14c f1a0d2f
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 16:01:40 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into devise-hacking
+
+commit b7bf14ce2893165b5774f56916529fc5eeed9058
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 16:01:35 2016 -0800
+
+    Make it so that the user can be locked out of account if they fail 5 attempts. Can only be reset if the user waits the alloted time. TODO: Need to figure out how to display the message when there is only 1 attempt left.
+
+commit f1a0d2f2d27402e60022dfb8f752eb09d8ab91a6
+Merge: 3dad07c 3121c14
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 15:55:28 2016 -0800
+
+    Merge pull request #46 from xdkernelx/mechanic_devise
+    
+    verify mal's changes and merge to development
+
+commit 4b51f7e03d6b3edeb99e359ff7c36e5d8b9eee86
+Merge: b6b10da 3dad07c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:52:19 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into devise-hacking
+
+commit b6b10dadd7b14d1f656ed66257687ccdb0cbd779
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:52:13 2016 -0800
+
+    Remove the timeoutable option for the time being. Add unique index to the unlock_token.
+
+commit 3121c14920671451df25c880ac530d8843dac3e8
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 15:49:19 2016 -0800
+
+    Add mechanics controller and views
+
+commit b567b344fde5bf3d8b55ba3f02cb050ee230ccc0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:45:28 2016 -0800
+
+    Made accounts lockable after 5 failes attempts to sign up with Devise warning that they are about be locked out, and made it so that they are locked out for 4 hours. Also, they will be asked to login after 30 mins.
+
+commit 3dad07c763e6f7d29a3dee6ea4926b4d25166000
+Merge: c80257f 01473c1
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 15:42:39 2016 -0800
+
+    Merge pull request #45 from xdkernelx/mechanic_devise
+    
+    verify mal's request and merge to development
+
+commit 01473c166c6da2aeff37bdbdce1d938c69622407
+Merge: b124685 c80257f
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 15:39:10 2016 -0800
+
+    Add zipcode and mech status to permitted params in application controller
+
+commit b12468574d554a41a1eb49601568320d4e9737ad
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 15:31:00 2016 -0800
+
+    Permit mech status parameter when registering and add to registration page
+
+commit c80257f3e2b7b4005270bfdbabd5d51d9fa85749
+Merge: 79b2b8b 21635d3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:27:15 2016 -0800
+
+    Merge pull request #44 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 21635d372868d550ddb86440846b0c16b792a9e5
+Merge: bb47953 79b2b8b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:25:13 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit bb4795321d4d828c2c4584f31e9c366088b4029b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:25:05 2016 -0800
+
+    Fix critical error where the password confirmation was not being passed in and the password for the user was the one in the original password field.
+
+commit 79b2b8bf3c7c8322d2e372b0ac409b7687c1287e
+Merge: 63a145c c0a735f
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:04:08 2016 -0800
+
+    Merge pull request #43 from xdkernelx/db-testing
+    
+    Verification process completed. Merge to development granted.
+
+commit 8cf79095d50781b40be4c2e6eab6e886e5d80525
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 15:03:23 2016 -0800
+
+    Remove unnecessary login link on registration page
+
+commit c0a735f2c332cbaaaae8fae41ea728ff1fb1638e
+Merge: 7d7ae41 63a145c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:03:18 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 7d7ae41d0360af6743f8b939455f87b6200b1c57
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 15:03:06 2016 -0800
+
+    Modify the routes after sign_up and log_in to be dynamic based on the user's class.
+
+commit 63a145ce5656df5e50692a5249043ceae410e8b9
+Merge: 23ef1f2 e325428
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:57:42 2016 -0800
+
+    Merge pull request #42 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit e3254283c9db5b6bd524a54c308b9d548dc405f8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:56:45 2016 -0800
+
+    Refactor several validations for efficiency.
+
+commit f1c755dcf394219df15140f575b777eee8737275
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:50:21 2016 -0800
+
+    Refactor VIN  validation.
+
+commit f4dd81276c31ca90c1255c2e449617dad973cbe1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:49:44 2016 -0800
+
+    Currently working code.
+
+commit 21a6db170934395e13c000a77df9e0a3e002dde5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:49:17 2016 -0800
+
+    Currently working code.
+
+commit 5076996e94ef811224d95ad79faba97c97a18f41
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:28:00 2016 -0800
+
+    Modify the validations to check for alphunumerics in the backend.
+
+commit 54a6e33e4d3d492587d1a96c3f7a08698e43c721
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 14:23:27 2016 -0800
+
+    Uncomment the mech_status boolean and create a new field for the zip_code of a user.
+
+commit 23ef1f22b10864647dcdd84f290200d4e33d6751
+Merge: 845f5c1 ba90549
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 14:17:22 2016 -0800
+
+    Merge pull request #41 from xdkernelx/css_edits
+    
+    Css edits
+
+commit ba90549f0ad558962041a1e6b36042a569a4148a
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 14:16:32 2016 -0800
+
+    Fix header
+
+commit 2e6bac1ca4d6f1e1d1b0f6b41883ead32a3074ac
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 14:11:25 2016 -0800
+
+    update home link in layout to go to cars index page
+
+commit 845f5c1631839515cbe9e039367fab05643d120a
+Merge: be66f96 1988451
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 14:06:11 2016 -0800
+
+    Merge pull request #40 from xdkernelx/car-branch
+    
+    fix merge issues
+
+commit 1988451b7b8d608e9bac7416d22e4ace74c02223
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 14:04:15 2016 -0800
+
+    fix merge issues
+
+commit 2ecbb618d9f85188a4e0052bdb80b612574d88e8
+Merge: 57d4aae be66f96
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 12:40:19 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 57d4aae885c55fa5a48882c05ced65aae818dee6
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 12:34:48 2016 -0800
+
+    Fix header
+
+commit 05bc272c87db37d659972f57b5f84ba332830ea5
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 12:28:29 2016 -0800
+
+    Fix header image
+
+commit be66f96d99681bf751f3306dcf6cb3a21b9c1445
+Merge: 31c61dc 6105bbf
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:20:56 2016 -0800
+
+    Merge pull request #39 from xdkernelx/css_edits
+    
+    Verification process complete. Merge to development granted.
+
+commit 6105bbf51f22bc2a47e44acfa144d8883e0b4ea8
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 11:19:40 2016 -0800
+
+    Basic styling changes
+
+commit c5b1dcc0ef445a884d8d5462c2199ffca39be80a
+Merge: c18dffe 31c61dc
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 11:19:04 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 31c61dc028442c4ae0e4aeb6f042298c4fe1c6bf
+Merge: 88ccdb3 f31ee1b
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:18:22 2016 -0800
+
+    Merge pull request #38 from xdkernelx/fixit
+    
+    Verification process complete. Merge to development granted.
+
+commit c18dffe5728475b827ec8406d354538ebf73365a
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 11:17:58 2016 -0800
+
+    Fix footer
+
+commit f31ee1b99a09474d0c3917ce64585faa45f878f2
+Merge: 23a14f1 88ccdb3
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 11:17:04 2016 -0800
+
+    fix merge problems in the car show views
+
+commit 88ccdb36426e7774f0ac9df5e4b905c2a07406bc
+Merge: f3eccbf 0098de9
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:14:30 2016 -0800
+
+    Merge pull request #37 from xdkernelx/car-branch
+    
+    Verification process complete. Merge to development granted.
+
+commit 0098de998e49ca0c0f6160623d04203f99a2bb96
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:13:02 2016 -0800
+
+    Solve issues/index conflict.
+
+commit fe924e67ff427a9066375ec8664dd3434d77c5a1
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:11:49 2016 -0800
+
+    Solve issues/new conflict.
+
+commit ee221fe98f999ac781f9843befd41a482896d2a6
+Merge: e040906 f3eccbf
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 11:08:56 2016 -0800
+
+    Solve cars/show merge conflict.
+
+commit 23a14f101309309e914d6bb77eaeb8149fe55c14
+Merge: 0b1c102 f3eccbf
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 11:05:27 2016 -0800
+
+    user restrictions to the views
+
+commit 0b1c102aa9619f66d0ca5776b7cbb4eda06d521b
+Merge: c3720b0 4fefd9a
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 11:01:48 2016 -0800
+
+    fixed merge conflicts
+
+commit f3eccbf4893076cac61027d5e3f42723e4e14618
+Merge: 4750726 4fefd9a
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 11:00:58 2016 -0800
+
+    added changes and remove conflicts from marvan's merge
+
+commit c3720b0771ad41fca702e6e16a55e8b5f6359a8b
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 10:59:16 2016 -0800
+
+    add user restriction to edit view on maintenance
+
+commit 47507261ca24523efe19aae548a5669ccd277d7b
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 10:57:00 2016 -0800
+
+    add user restrictions to the views and refactored cars controller
+
+commit e0409069ecd96a82cd6e8e2bc60a77b43ce87e2c
+Merge: 4ded463 4a29188
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:56:32 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into car-branch
+
+commit 4fefd9a481cf13e9badeeec76368ce7ed6f8b165
+Merge: 353c291 4a29188
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:56:19 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit 4ded463d27ce2810395dfdac7f2ef9f5a3c5bf71
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:55:16 2016 -0800
+
+    add back link to car show, issue index & new, maint index & new
+
+commit 4a29188d864b7e631bba700815d011289cd324a7
+Merge: 2dcc79c 906933d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:52:25 2016 -0800
+
+    Merge pull request #35 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 906933d238df5bd7f48f920fbaca82d2a1498d1b
+Merge: 29ed433 2dcc79c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:51:43 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 29ed433f345f4c5cb8c6826356547058c30376b7
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:51:32 2016 -0800
+
+    Modify the default sign_up rerouting.
+
+commit 2dcc79c29c34354615d12ee1528d208c55b54a70
+Merge: ecd6402 ce7cd37
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:48:22 2016 -0800
+
+    Merge pull request #34 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit cfa6453a3a88893dc6094e5ad6106011b4a94335
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:48:12 2016 -0800
+
+    add links to maintenance and issue index and new pages
+
+commit ce7cd37bb636ad7cb53e47c1e76bbde9f96672c3
+Merge: 4a8d254 ecd6402
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:47:04 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 4a8d254d7b47283ae1c23f3aad93dc88b1823e2e
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:46:52 2016 -0800
+
+    Modify the default sucessful route during a login.
+
+commit 5acd370509a13bfeac9b7a2a4405d56bb8048833
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:41:44 2016 -0800
+
+    move edit and delete link from cars index page to cars show page
+
+commit 70882682d6ad517d71ee1677f2a59f5868146c47
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 10:38:24 2016 -0800
+
+    Fix sticky footer
+
+commit f0f082ebe76559de11feaa91028c684696d34bf3
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:37:37 2016 -0800
+
+    replace user link in layout with welcome message to user, remove add a car link from car index if user is not signed in
+
+commit 353c2915bb66701d7c2a49f527e4d1a52f45600d
+Merge: 2fbfef9 ecd6402
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:28:00 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit ecd6402f3acdd5404c8077e47a87401adb01eb75
+Merge: daff403 d12af7a
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:27:38 2016 -0800
+
+    Merge pull request #33 from xdkernelx/route_work
+    
+    Route work
+
+commit 580e5835cc2fd5ddec1bba408779f1c221f1270c
+Merge: 5ed5c8c 3499055
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 10:25:15 2016 -0800
+
+    added files from pull
+
+commit 2fbfef98d6ca62a0e8b87944b64b201de9907030
+Merge: 5eab8ac daff403
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 10:22:51 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit d12af7ac683deb9d918649856798f97b97bccb62
+Merge: 4ac7d03 daff403
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 10:17:38 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into route_work
+
+commit daff403e6e550883f07ec3e9d8cb81587eab1ab4
+Merge: 3499055 7bd3209
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 10:17:31 2016 -0800
+
+    Merge pull request #32 from xdkernelx/db-testing
+    
+    nestor modified users/profile
+
+commit 7bd3209f375a8aa41b2916fa395fd1b2e399d811
+Merge: 21f1790 3499055
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:14:08 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 21f1790d9f1c93fd0b3db99ebded62e297e70eb4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 10:13:50 2016 -0800
+
+    Modify the ApplicationController so that is navigates to the users/profile
+
+commit 4ac7d039bb9105705d4931eda97e9cc598b9c906
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 09:52:33 2016 -0800
+
+    Add registration page
+
+commit 5ed5c8c0b7f16c482b4696ed07e25a33d3791153
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sun Nov 6 09:36:08 2016 -0800
+
+    undid changes for test of attempting token
+
+commit 34990554b95ab0c7ec123399290e9167184fd429
+Merge: a51a804 2fe509b
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 09:34:07 2016 -0800
+
+    Merge pull request #31 from xdkernelx/css_edits
+    
+    CSS edits
+
+commit 2fe509b9aeb01c44785b51a5b28440ffdb9874aa
+Merge: 45d90a6 a51a804
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 09:32:44 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into css_edits
+
+commit 45d90a6e5ac2cbe6040cd1df2b304d38ce6deebb
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sun Nov 6 09:32:30 2016 -0800
+
+    Fix font on sign up/in pages
+
+commit 5eab8ac04e9f08c8c1399fd00e120a3d95312316
+Merge: 0e5a38b a51a804
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sun Nov 6 09:24:30 2016 -0800
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit a51a804a297ab7c7036f17206d4f920b5e490ca3
+Merge: c91fb33 0426239
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 02:14:01 2016 -0800
+
+    Merge pull request #30 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 042623992a4ec2a43864ba3561f8e50a33591717
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 02:07:14 2016 -0800
+
+    Potentially fix something that was so simple. Ah, programming.
+
+commit 79a2181cde5ab1a72619f367041350a5e1fdb4a5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sun Nov 6 02:00:07 2016 -0800
+
+    Testing once again whether or not tests can be scripted in Travis.
+
+commit c91fb330c35b03c5c834c3648c8c51dcb39ef58c
+Merge: d1444d6 954fb9f
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 23:01:23 2016 -0700
+
+    Merge pull request #29 from xdkernelx/css_edits
+    
+    Homepage edits
+
+commit 64640b41fc7f0871cfc007015639ab97f9460f8c
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 22:54:33 2016 -0700
+
+    Format of issues show page
+
+commit 954fb9fd83c6d2c433999954919cb3a394506578
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 22:34:48 2016 -0700
+
+    Homepage edits
+
+commit d1444d6aa1a08895a9954c84cf9bb6ae5cf90924
+Merge: 61c7e73 730cf85
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 22:04:33 2016 -0700
+
+    Merge pull request #28 from xdkernelx/issues_and_repairs
+    
+    mal made some css changes
+
+commit 730cf85974d3a0236d9304ea501463cf4c0824fa
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 21:40:21 2016 -0700
+
+    Simple css edits
+
+commit 0e5a38b4759f745b39fc00678715f18dd76ee794
+Merge: d693718 61c7e73
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sat Nov 5 18:24:13 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit 61c7e739ce662c211536ea54ff9d5db1df150dab
+Merge: 0dcc69a 6f0a44c
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Sat Nov 5 18:21:44 2016 -0700
+
+    Merge pull request #27 from xdkernelx/issues_and_repairs
+    
+    Refactor issues and repairs
+
+commit 6f0a44c18a4abf4f0eb7e174c7cb8ce1674c576e
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 18:17:48 2016 -0700
+
+    Refactor controllers
+
+commit ccd0af8760030fd41c9c94c18c72fa5949e79a77
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 18:08:53 2016 -0700
+
+    Refactor issues controller
+
+commit 20d9f78cb1a62b0a88ca6e2f63b41f27c55b54fb
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 17:44:37 2016 -0700
+
+    Messing with css
+
+commit d693718923da7abb58044d2597faaa0591fc2ec2
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sat Nov 5 17:30:17 2016 -0700
+
+    add link to maintenance and issues from car show page
+
+commit 0dcc69a2a07b95f35c7dc435002b732ae1057790
+Merge: acadb5d 868b9f2
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 17:04:02 2016 -0700
+
+    Merge pull request #26 from xdkernelx/issues_and_repairs
+    
+    add destroy for repairs
+    fix delete/edit functionality
+    update repairs controller
+
+commit 868b9f22f0e50f51efa18242c198b29cec429ba5
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 17:02:55 2016 -0700
+
+    Update repairs_controller.rb
+
+commit 479735d9d16e5dad7f88b68ed8e4dcfa3f9d9b8d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 17:00:14 2016 -0700
+
+    Fix repair delete/edit functionality
+
+commit 2951c26acae53c5ecf4a528ae7864464d472ce93
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:40:09 2016 -0700
+
+    Add destroy for repairs
+
+commit acadb5db195d9d0a8bf13fb5d605ea05cc98805a
+Merge: 0a9eb0d ee65d0e
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 16:26:23 2016 -0700
+
+    Merge pull request #25 from xdkernelx/issues_and_repairs
+    
+    Issues and repairs
+
+commit ee65d0ebef3ad3ed6b02a49bc52915ec01c5999e
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:19:40 2016 -0700
+
+    Update index.html.erb
+
+commit 8b269d4f5b10fcf1abc42cc32cec1de2ce64c8b9
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:18:51 2016 -0700
+
+    Update edit.html.erb
+
+commit 3e2a62bcecc857d71572f5f829462a0f06667698
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:18:22 2016 -0700
+
+    Update repairs_controller.rb
+
+commit 27daccbc3c8aa9d3cf0dbcba59c76e4e18ec2bad
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:17:18 2016 -0700
+
+    Update issues_controller.rb
+
+commit 6081a42f33021cfd57228fc7d9a48d47106c54e2
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:14:32 2016 -0700
+
+    Update new.html.erb
+
+commit dff92988eba53930d47fb445d06dc77878c76f7d
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:13:17 2016 -0700
+
+    Update new.html.erb
+
+commit cecf1f5f9412f76dd60862f67e9a6501a96332b1
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:11:43 2016 -0700
+
+    Update issues_controller.rb
+
+commit d7a22d4d79e92ce3042822cd0004c7376fd381a0
+Merge: 7a73f44 0a9eb0d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:10:04 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into issues_and_repairs
+
+commit 7a73f44b4768240c0d43cd6bec9fe264192db34b
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 16:09:58 2016 -0700
+
+    Add issues and repairs views
+
+commit 0a9eb0d3c2bd2c7e69ddb35b015c0b6b97e67938
+Merge: 3c8eaec f78acf0
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sat Nov 5 14:18:28 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit 305f6cff9017d62899bac76ddbce8c79ace5f1d9
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 13:27:19 2016 -0700
+
+    Functioning issues index, edit, and delete
+
+commit 93d764df2742e98a484f4bc7a56fc964d4a48cdd
+Merge: 4495c38 f78acf0
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 13:22:21 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into issues_and_repairs
+
+commit f78acf06ffe63faa69012acc11cff1c4f453e3f2
+Merge: 17a9b12 c8720f0
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 13:20:35 2016 -0700
+
+    Merge pull request #24 from xdkernelx/maintenance
+    
+    Maintenance
+
+commit c8720f03a35dc192dbf88a30fa094e99fc54be85
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 13:16:18 2016 -0700
+
+    able to sort maintenance report by descending order
+
+commit 4495c38a0e9bce6ea985539c23ead9aff8b97c27
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 12:59:44 2016 -0700
+
+    Add edit/update functionality for issues
+
+commit f51c665ecb7fadbe79dde64a66a742a407b75427
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 12:13:08 2016 -0700
+
+    Fixed logic for issues form
+
+commit e7b2766eea008e2830bc98693c725e1b27eaec88
+Merge: 56e1cad 17a9b12
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 11:58:08 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into maintenance
+
+commit 56e1cadf985c530f0bca34250c11583b9087cdea
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 11:57:13 2016 -0700
+
+    add home button to layout/application.index and index and new page to add if they are not logged in they cannot view the page
+
+commit 2522f3a244ba5ebb2dff0679ebc50014f7712940
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 11:50:43 2016 -0700
+
+    other users are not able to access a user's maintenance index and new page
+
+commit 003c595ef07cfbc4a31b4b5e41f0986cae62a2d2
+Merge: aa560b3 17a9b12
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 11:48:27 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into issues_and_repairs
+
+commit 17a9b12d901036b7bedb0bf15320a55c96f3ee84
+Merge: fc477ff b145d4f
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 11:47:54 2016 -0700
+
+    Merge pull request #23 from xdkernelx/maintenance
+    
+    add a link to user profile page and logout button the layout/applicat…
+
+commit 445a6ba26844032b4c83ee84eebee0d8d5a3886b
+Merge: c253bb7 fc477ff
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:39:05 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into database-integration
+
+commit c253bb7187e0d07db9b199b321be0260a5a0c39a
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:38:28 2016 -0700
+
+    Purposely make a test fail to see if Travis is working as intended.
+
+commit b145d4fb38d9aea02ce5efd04d039005013fa6d3
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 11:30:21 2016 -0700
+
+    add a link to user profile page and logout button the layout/application.html.erb
+
+commit 4351b611a75de7dd8a6e5ea06f789d84ba142e92
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:13:14 2016 -0700
+
+    Modify the YAML to do the testing.
+
+commit fc477ffb757d9f7abd0451812ac06c6d7bad3ed0
+Merge: 8612eb7 2624430
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:10:49 2016 -0700
+
+    Merge pull request #22 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit aa560b3392a8b7ce95ef4be50b8478e183d34d45
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 11:08:55 2016 -0700
+
+    Add new issues view
+
+commit 26244305a9abcf0f3d77b0b3045b2523e415f536
+Merge: 742997e 8612eb7
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:06:36 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into database-integration
+
+commit 742997e1ede3830ac66498561800762b2c1a2eed
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:06:17 2016 -0700
+
+    Modify the Travis YML some more so we are good to go.
+
+commit 013a538eeb68c3e139016a79ab8e33c44f5a1557
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 11:01:50 2016 -0700
+
+    Modify the Travis YAML some more.
+
+commit 8c86ecdad71a42b41226f601ad4f8794a9d2e3e6
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 10:53:14 2016 -0700
+
+    Modify the YAML to create a DB in Travis.
+
+commit d29c51bafb106a2f02ef1717b9b79903588ba501
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 10:46:27 2016 -0700
+
+    Modify the YAML for troubleshooting purposes.
+
+commit 1a650c3dad1ad7157462c0881dd6e1bb7e3270f9
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Sat Nov 5 10:05:11 2016 -0700
+
+    Add issues index page
+
+commit 3c8eaecddabd959356784193ec1dbb4f2cb06de8
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sat Nov 5 08:20:42 2016 -0700
+
+    add verification to create car in controller
+
+commit 721edb3a06389867bfd9245798cfe290b35ea204
+Merge: 8734bc6 8612eb7
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Sat Nov 5 08:08:19 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into car-branch
+
+commit 8612eb76237cf8310bd99d50b51aa03a3745dd82
+Merge: ff2c96b 84e2fd0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 01:33:54 2016 -0700
+
+    Merge pull request #21 from xdkernelx/maintenance
+    
+    Verification process complete. Merge to development granted.
+
+commit 3f599e7c7e577532d669d37f34282d7f7cd0f1f6
+Author: Nestor J. Alvarez <grimreaper1169@gmail.com>
+Date:   Sat Nov 5 01:32:49 2016 -0700
+
+    Add travis YAML.
+
+commit 84e2fd0e0beea58d511bb93476e9e5e760887ec3
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 00:13:59 2016 -0700
+
+    fix header for the edit page of maintenance
+
+commit fc1f3280f9e5acbcddc75be6f5194472b8e84e1d
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 00:08:18 2016 -0700
+
+    add show links to the title but will change the link to be the box itself later
+
+commit e7c13c876869eff824d0fc300924015126c0fc4e
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Sat Nov 5 00:00:02 2016 -0700
+
+    refactored edit, update, destory, new, create methods to two separate private methods instead of calling finding the params for each one
+
+commit bf8451fd147638c4ea893d26686d1d0577127926
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 23:15:35 2016 -0700
+
+    add 's' to maintenances on controller and view, able to create, edit, and delete a report
+
+commit 8734bc600ba0bdca415bd5d83eb0d88f1a7633c8
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 22:42:13 2016 -0700
+
+    clean up my code
+
+commit a0c9a36aee5da69f197e32454f06c7a658bb4dd7
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 21:46:30 2016 -0700
+
+    fix delete issue
+
+commit 5e1b75498fe4783fdebd69b8ef21f172833459c5
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 21:39:55 2016 -0700
+
+    add delete to controller and view
+
+commit adb588f399e8fee26128a998c89391a3e0818914
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 21:35:06 2016 -0700
+
+    add edit controller and view; add partial form to new and edit view
+
+commit ff2c96b27ce9a50d6db86fc5d2dd3ce746aebeda
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 20:43:43 2016 -0700
+
+    change maintenance to maintenances in the routes and create a new form for maintenance report
+
+commit ea91b4ce53f0998bd72f7372d2630a7f516c0145
+Merge: e92e87b 22ac3e8
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 20:20:41 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit 22ac3e8ad93d3b071e1fa525eb092d3f2e8da727
+Merge: 8cd6dde 734623a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 20:02:04 2016 -0700
+
+    Merge pull request #20 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 734623a4ec771d04d9863024c7fa4862dcf3adcc
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 19:14:59 2016 -0700
+
+    Everything from the child level to the parent level seems to be working in terms of association.
+
+commit e8e24d1934c43037391f609ea29d0c4c390fd29a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 19:11:52 2016 -0700
+
+    Parent association testing for Maintenance class done. Level 2/2.
+
+commit 8cd6dde116539a7cda437d6623df68075b69cd8d
+Merge: 2dcdce0 06162f6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 19:07:24 2016 -0700
+
+    Merge pull request #19 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 06162f6e8ffb87b6e9da47b576e330c9106618bc
+Merge: 6a3ebfc 2dcdce0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 19:05:54 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 6a3ebfc6de4a4e5462db5e16bb4fd2b1f3da0daf
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 19:05:47 2016 -0700
+
+    Try a workaround that deal with the generic warning that rails tell us not to use when doing raise_error. I did this since I couldn't find a proper solution.
+
+commit d837be15cc098f4edb5805b05e0dde6b1dc31378
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 18:50:10 2016 -0700
+
+    Create simple tests that test whether we can create valid Maintenance reports. Testing for presence fields seems a bit needless since AR already checks if the thing it's validating is existing and would be inefficient during runtime, especially since we are implementing Travis. Not exactly a shortcut.
+
+commit 2dcdce0af5e3677ff1316bb69724e11014d9da5d
+Merge: 5fe2b3a d0ca1b2
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 18:37:04 2016 -0700
+
+    Merge pull request #18 from xdkernelx/car-branch
+    
+    Verification process complete. Merge to development granted.
+
+commit d0ca1b2348a6fede5b99f0771e794ea945aa5ab7
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 18:14:59 2016 -0700
+
+    add new car form
+
+commit 5fe2b3a26b1dc551a00d8efe7cfe5a51c4c9d576
+Merge: 307b9b9 f7f0da6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:44:24 2016 -0700
+
+    Merge pull request #17 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit f7f0da68bad782bbdc120060903c8045f87aefe3
+Merge: c3aa11d 307b9b9
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:42:46 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit c3aa11d0a43cdd93f0514d83351491ec261494d5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:42:11 2016 -0700
+
+    Add generic before class to all the spec helpers.
+
+commit 834a8572de5f3051505ea185d6fec06597d008a5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:40:01 2016 -0700
+
+    Child association testing for User class into the Issue branch complete. Level 3/3. TODO: Testing for Car branch, Level 1/1 incomplete.
+
+commit 307b9b934bf834bb4591e3c5cf3b8b595cb8b7e9
+Merge: 715cd07 79d841c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:29:32 2016 -0700
+
+    Merge pull request #16 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 79d841c6a2279b7e791ef34c80b3548eead7554d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:28:40 2016 -0700
+
+    Schema automatically updated.
+
+commit b5885dc8d816b589d3e30a530b0371df74460a30
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 17:19:37 2016 -0700
+
+    add link from car index to car show
+
+commit fcaa05a59654f858ecd316c5a2fd0a4223a871f3
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 17:15:58 2016 -0700
+
+    add car show controller and view
+
+commit 82be654da4f1104462c3079a52acb1b280e0a644
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:12:09 2016 -0700
+
+    Update the User test suite to be an ZLS instead of a nil when the user opts out of putting a phone no.
+
+commit e3803eeb473fdc9bc382b72aa8bd184b07825fce
+Author: marvan_t <marvan_t@hotmail.com>
+Date:   Fri Nov 4 17:11:03 2016 -0700
+
+    add car index controller and view
+
+commit c05dbe2954df704d2297538954da027fff067e9d
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 17:10:45 2016 -0700
+
+    Update the validation for phone to allow for empty fields during the regitration process.
+
+commit 715cd070b269ea5f54dd115d83b8fbc7f258a425
+Merge: 0303dd1 259a67b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:54:18 2016 -0700
+
+    Merge pull request #15 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 259a67b33691926b120e6f78306b0a0b46e1febb
+Merge: c8d5b1d 0303dd1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:52:54 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit c8d5b1d79b29b16f1694403ee3dad0bbd3b3cd1b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:52:47 2016 -0700
+
+    Update the User::phone field to be an integer.
+
+commit e92e87bc104d83ee1fd28f222c0367f0cbea0604
+Merge: b9b8fc4 0303dd1
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:47:34 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into development
+
+commit 0303dd101047bb7729af5fe7b27cef77fcc9e655
+Merge: 109607c a63a8e6
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:45:42 2016 -0700
+
+    Merge pull request #14 from xdkernelx/homepage_styling
+    
+    Homepage styling
+
+commit a63a8e66d5c2e88f700b071ebc40f727271261b8
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:45:11 2016 -0700
+
+    Update application.html.erb
+
+commit 7287b9e259b8835946a613decbd6183a89baab25
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:44:14 2016 -0700
+
+    Add basic styling for homepage and make it so login fields are linked with devise
+
+commit f2432b5af1801d8599636ba1914f38f625659419
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:43:00 2016 -0700
+
+    Modify the CHANGELOG
+
+commit 305fb2ccc01fe95349594eb0d22db3e13c24bd11
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:42:41 2016 -0700
+
+    Test the limit constraint of the Title.
+
+commit e1bc4a21d06db4d2c2ef5fa5ca1bae42511f773a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:37:15 2016 -0700
+
+    Testing for field presence complete.
+
+commit 18dd46f9fb217a0a2364ca8aabf84b2eca192391
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:31:15 2016 -0700
+
+    Update validations for the mileage on both the Repair and Maintenance class.
+
+commit d4b78bbc3b81e335b54d091f507affb757d959bd
+Merge: 1425393 109607c
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:27:56 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into homepage_styling
+
+commit 109607c602cdf162f6e4f7cbd29b9b3a88b9a14d
+Merge: bc5f9b6 25301fe
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:27:40 2016 -0700
+
+    Merge pull request #13 from xdkernelx/route-test
+    
+    change email_field to be text_field in devise registration
+
+commit 25301fed0594c387138a0e373d6f9668c855836e
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:26:52 2016 -0700
+
+    change email_field to be text_field in devise registration
+
+commit bc5f9b64e6397d7015171f7814dfbc9359bac4fc
+Merge: 16f70fa 319d885
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:24:30 2016 -0700
+
+    Merge pull request #12 from xdkernelx/db-testing
+    
+    Verification process complete. Merge to development granted.
+
+commit 319d8851be08a6f807ac2eceba662259bb58ee49
+Merge: 964c5cf 16f70fa
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:23:46 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 964c5cf59039cf9f68f7667017b3ca478a067023
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:23:40 2016 -0700
+
+    Write phone validations tests for the User class.
+
+commit 1425393e8623dec98413a7bb0e59b14d10564c1f
+Merge: 6060f44 16f70fa
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:23:27 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into homepage_styling
+
+commit 16f70faed256e05dfdb75eeed322b14129604dbc
+Merge: 8c75447 583624f
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Fri Nov 4 16:22:49 2016 -0700
+
+    Merge pull request #11 from xdkernelx/route-test
+    
+    fixed the first name and last name fields in the devise from email to…
+
+commit 583624f01caa45b00179d655c6b8fc05a307ede6
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:21:33 2016 -0700
+
+    fixed the first name and last name fields in the devise from email to be names instead
+
+commit 6060f44db69826a209b57e327a0f9d53393b71ff
+Merge: 393676c 8c75447
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:20:00 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into homepage_styling
+
+commit 8c754476c11109db4a2ef401bb29cdcdc74a47d2
+Merge: c52dab4 62a9012
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Fri Nov 4 16:19:48 2016 -0700
+
+    Merge pull request #10 from xdkernelx/route-test
+    
+    commented out seed file, and index from cars controller, edited the devise registration page to include first name and last name
+    
+    and fix two merge conflicts in the gem file and the welcome controller
+
+commit 393676c4b4ca85ef62f3bdfbc4a981c2bc6763e5
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 16:19:42 2016 -0700
+
+    Make edits to navbar
+
+commit 62a90127111a6507507b19f9ec5f9ef1e8a448b3
+Merge: af2bd86 c52dab4
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:18:17 2016 -0700
+
+    fixed merge conflicts in the welcome controller, removed duplicate index method
+
+commit b9b8fc41e7c590fc648ceb26309d74f5f0bf5afd
+Merge: 26134df c52dab4
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:17:00 2016 -0700
+
+    fixed merge conflicts in the gemfile lock
+
+commit c52dab420c0547c4f114340c559def13459bddd5
+Merge: 4335a0f e43ee3c
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Fri Nov 4 16:15:00 2016 -0700
+
+    Merge pull request #9 from xdkernelx/db-testing
+    
+    Db testing
+
+commit af2bd86afd72b1ba1abf91e7d50afd674ce1a8e2
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 16:14:43 2016 -0700
+
+    commented out seed file, and index from cars controller, edited the devise registration page to include first name and last name
+
+commit 5459a62d8681447dd581c1fbd02a10e555b90872
+Merge: e43ee3c 4335a0f
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 16:02:58 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit e43ee3ca61b51ce5a52f49fd64ab02e10e663557
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:57:24 2016 -0700
+
+    Tests for Car model pass validation tests.
+
+commit d3a469671a8c8b60439cdb6347fe116db77a4f25
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:53:38 2016 -0700
+
+    Write some tests for Issue dealing with parent association Level 2/2 complete. Validation testing complete.
+
+commit 13ff4eff3f69c629b9ff94d684d81b2aad5cb600
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:46:46 2016 -0700
+
+    Write some tests for the issue_spec.
+
+commit 6754a6436330e529ab8b72ddc5b7048196609c45
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:44:56 2016 -0700
+
+    Update the Issue class to have a default urgency rating of 1 if none is supplied.
+
+commit 4335a0f6d6c2deed5fcee53e1485ca0f91a51c64
+Merge: 9fb6033 e19c3b3
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Fri Nov 4 15:43:17 2016 -0700
+
+    Merge pull request #8 from xdkernelx/homepage_styling
+    
+    merging bootstrap fix
+
+commit e19c3b39943f282f942132937e4bae37033eaf55
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 15:40:35 2016 -0700
+
+    Commit to fix bootstrap issues in main.scss
+
+commit 26134df6d14a627451172a9b3c8ee0ade6be631b
+Merge: 9bb1856 9fb6033
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 15:40:22 2016 -0700
+
+    fix merge conflicts in the gemfile, removed bootstrap and kept bootstrap sass
+
+commit 9bb1856f1bbccbe7bf70beedb87b45a657893a92
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 15:38:23 2016 -0700
+
+    testing repair route still has car_id and issue_id
+
+commit 20a8e8cdbc3d8840a71cba6d4f74e61cf80e6831
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:35:13 2016 -0700
+
+    Update the car_spec to handle the parent association. Level 1/1
+
+commit 46c51aeae451ecf3be04b61888922af741d72f0f
+Merge: ba7f9b0 9fb6033
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 15:35:06 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into homepage_styling
+
+commit ba7f9b0840b28933faa6f69a976802803b0b2bb1
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 15:35:02 2016 -0700
+
+    Start adding scss
+
+commit 9fb603308ce9a971ddb7d0287bfeef2796dd5aff
+Merge: 5143d93 1e576f6
+Author: Marvan Taghvaie <marvan_t@hotmail.com>
+Date:   Fri Nov 4 15:32:20 2016 -0700
+
+    Merge pull request #7 from xdkernelx/db-testing
+    
+    Created views for Devise
+
+commit 1e576f63e924b3c867bc28c1d14b805c3413e415
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:31:26 2016 -0700
+
+    Generate views for DEVISE.
+
+commit da92f2dfdc3fefa21a279c7a8d3c0871f7d3ebdf
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:23:23 2016 -0700
+
+    Modify the user_spec for continous testing.
+
+commit f932a7df5d183179d75a9aa94f4f30ef7ac3f66b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:22:41 2016 -0700
+
+    Modify the rspec to destroy all the instances inside the database for continuous testing.
+
+commit acc8560b50270b9efa6f791492a3d5034ea439e0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 15:02:12 2016 -0700
+
+    Change the call to make it into a before(:all)
+
+commit 19b3cb1163ec1856a347324f5833f395e55bc0e3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:53:53 2016 -0700
+
+    Write some tests for the Car model. All failed.
+
+commit 13221c690bae6269a8c25dd93aaf06dac9bff490
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:53:37 2016 -0700
+
+    Update the association inside the car model. No shortcut for has_many associations apparently.
+
+commit 9c95bffa9f6a668837216237a6a3d860ab9fec43
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:45:31 2016 -0700
+
+    Move the user_spec into a models subfolder.
+
+commit ae6bb78d10741868b74a304642e3fc8e3ca764a7
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:41:47 2016 -0700
+
+    Remove the simple bootstrap since there was conflicts.
+
+commit 7044b1a0080f55b9fcaced46aed9d5474b5359c4
+Merge: ca4053e 5143d93
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 14:40:35 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/auto-biography into homepage_styling
+
+commit b03a0e0be37031dfa7bae2e172fde730db2ba057
+Merge: 37fcfd8 5143d93
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:40:01 2016 -0700
+
+    Merge branch 'development' of https://github.com/xdkernelx/healthy-car into db-testing
+
+commit 5143d93a36ac602d11acb7dba883d244d3ea82bb
+Merge: 4f93cc1 25b2406
+Author: Mal Wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 14:39:57 2016 -0700
+
+    Merge pull request #6 from xdkernelx/database-associations
+    
+    Database associations
+
+commit 37fcfd8ea1b5ead72633ada0b8be77e71bb3ded2
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:39:50 2016 -0700
+
+    Gemile and Gemfile.lock automatically updated after a new gem dependency.
+
+commit ca4053e1689f3647454fd5e15ac5586c28ee3f81
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 14:37:59 2016 -0700
+
+    Remove bootstrap from gem file
+
+commit 25b24065de388dc0441455eea43deea933132128
+Merge: 0761513 4f93cc1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:34:41 2016 -0700
+
+    Resolve merge conflicts.
+
+commit 076151335e2b4c7210a99a56516dedbcfa324720
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:31:49 2016 -0700
+
+    Remove Commment type to streamline workflow.
+
+commit 34abd3429c934641855598e36cef67322e3cc0a6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:31:11 2016 -0700
+
+    Create associations for the base 5 models - User - Car - Maintenance - Repair - Issue -
+
+commit ac7eb3888fe4d7e92caaa809bda07ed09fe6025d
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 14:25:46 2016 -0700
+
+    Add root route, welcome controller, and view.
+
+commit 14eba582bccfb0bf3211fd5c1ad4e529ef1871a9
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:25:35 2016 -0700
+
+    Modify the model and migration files for the Repair report class.
+
+commit c2a43ef57e1f8ca1db262a5ef3cb30f01dea2f00
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:23:28 2016 -0700
+
+    Update the migration and model file for Maintenance reports.
+
+commit 5fb31940b6c98f4149955fbd43ad616fbdcc35d7
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:21:04 2016 -0700
+
+    Create files post-Repair model generation/
+
+commit 5f526d39dca448bf231985f8213e0276eda73307
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:20:40 2016 -0700
+
+    Create files post-Maintenance model generation.
+
+commit 2c8241b544b7aa071495c469e8d2744d96ba6827
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:19:24 2016 -0700
+
+    Update the Issue migration file.
+
+commit 3139e63498bacc93a47f39f2c7f0c79f0f512048
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:18:53 2016 -0700
+
+    Remove Stretch Goal models from the DB.
+
+commit 44f53a162303e6ebfac0e525650c2ab14a4350b8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:17:02 2016 -0700
+
+    Allow the Car VIN to be optional/
+
+commit c6c07a008e20826867fdfde6207572ea8a5eb64c
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 14:15:13 2016 -0700
+
+    Remove the mech_status for current MVP goal of the app.
+
+commit 4f93cc106c351f231ec022befe5f62872bf3ddb8
+Merge: 82c4ad0 c72c1db
+Author: Paula Lee <pdlee877@gmail.com>
+Date:   Fri Nov 4 11:50:13 2016 -0700
+
+    Merge pull request #5 from xdkernelx/bootstrap_setup
+    
+    Bootstrap setup
+
+commit c72c1dbab6f64f4a031bdefbf1b7636c5db0ad9a
+Merge: e36076b 82c4ad0
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 11:44:57 2016 -0700
+
+    Add bootstrap require to application.js
+
+commit e36076b205a9bf0d31ba709fad556d164aa7eca5
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 11:43:47 2016 -0700
+
+    Add bootstrap requirements
+
+commit 4231896bb6362de1e03aa741c5d6491af95c7e19
+Author: mal-wood <mallorywood413@gmail.com>
+Date:   Fri Nov 4 11:41:00 2016 -0700
+
+    Track schema
+
+commit 82c4ad0cb0a4df8e5d66d6bfcc15611eb6b5c3a1
+Merge: 9629b92 ce43a98
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 11:17:23 2016 -0700
+
+    Merge pull request #4 from xdkernelx/database-associations
+    
+    Verification process complete. Merge to development granted.
+
+commit ce43a98b38a2a1fcd24689f8013cedd23a5c8f42
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 11:16:10 2016 -0700
+
+    Add the car_id that will be used for the car association.
+
+commit 57cf17c67d2d283bb73175dc07317f5d40efdf54
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 11:09:26 2016 -0700
+
+    Modify the entire Car class to make the VIN a string of only 17 alphanumeric values instead of an integer.
+
+commit 4177b4ee35b2e6bd3f576a9f10aed656e350a229
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 11:04:54 2016 -0700
+
+    Change the default value of the rating to pass validation.
+
+commit 2a545b0b42aeac6d45cf0f279db60e8b140a0247
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 11:04:08 2016 -0700
+
+    Remove the shop_id from the Report migration since we are not using it at the moment.
+
+commit f576cb79f63a537db1f3530dcf2cc3ff7cdcd1ea
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 10:59:41 2016 -0700
+
+    Create a before call to make the tests a bit more DRY.
+
+commit 32f6d97096b78c91e657472c47bad51f78261f74
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 09:00:58 2016 -0700
+
+    User model makes the phone nil if no entry is submitted upon creation.
+
+commit 9629b9285f1d5d17c2335a239b4321e40dde574c
+Merge: ea0505f 9f818a1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:57:47 2016 -0700
+
+    Merge pull request #3 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit 9f818a16004cd9252ef7200bf42d7f94b05f21bc
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:56:21 2016 -0700
+
+    Create a user_spec file to test the functionality of the User class.
+
+commit d516776845f60575940411b043115b2ea8a7da65
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:55:50 2016 -0700
+
+    Schema automatically updated after a migration.
+
+commit 4ec654381efc299c9ce547c63f16951e5ee57d79
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:45:17 2016 -0700
+
+    Files generated post-RSPEC installation.
+
+commit 0e37f369602c0f9dad9289dc2b12941c7638c0b8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:44:28 2016 -0700
+
+    Gemfile.lock automatically updated after bundle install.
+
+commit a940beefc38bdfb643b78a5fcfaabeeba9b439d2
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Fri Nov 4 08:44:01 2016 -0700
+
+    Modify the Gemfile.
+
+commit ea0505fae122440aff12cf8946b9ec4c415e5c29
+Merge: 3c2d59d 048d173
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 22:10:22 2016 -0700
+
+    Merge pull request #2 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit 048d173d45f18e16650b1b898f76acfab12d1ce1
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 22:06:41 2016 -0700
+
+    Update the validation for the phone class.
+
+commit 5a3c7efa19a60aff729e3a8ec6b2eba705514dab
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 22:05:59 2016 -0700
+
+    Remove the limit of phone, wanted a numericality instead.
+
+commit 724c1cc1d93b09f496c0dbb6573bb5ea7297cd63
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 22:02:37 2016 -0700
+
+    Update the ApplicationController to accept a phone field during the sign_up process.
+
+commit df670a6335a31f28869cae329fd71e563fa61b98
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:56:31 2016 -0700
+
+    Remove the turbolinks reference from the JS pipeline.
+
+commit f4995032efaf212e583b0987a6e6d67573c50b1f
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:53:31 2016 -0700
+
+    Fix an improperly named field inside the Ticket model.
+
+commit 3c2d59dd82eff64981ac46d657005b5975ada44e
+Merge: 997ef80 ece6b8e
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:27:45 2016 -0700
+
+    Merge pull request #1 from xdkernelx/database-integration
+    
+    Verification process complete. Merge to development granted.
+
+commit ece6b8edbb7235689cb49ccfaf492aaf20037353
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:23:34 2016 -0700
+
+    Update the migration file for Issue, was missing the user_id. Very crucial.
+
+commit 66387b5f3f6447e2861aefce61d6db873910229b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:22:24 2016 -0700
+
+    Update the CHANGELOG
+
+commit 709270a0023cb625b423972f4bb3a2acc3594f33
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:21:42 2016 -0700
+
+    Write validations for the Issue model.
+
+commit 1cd3bcc2d092b6673104ff305b551a44fba2337b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:20:36 2016 -0700
+
+    Create fields for the Issue model migration.
+
+commit 53f83ca7cbc534a01e387160f032063bfd410e18
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:18:36 2016 -0700
+
+    Create files post-Issue generation.
+
+commit df1c50268346559107f0edc3d89d34da1cc81b42
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:17:35 2016 -0700
+
+    Make a CHANEGLOG
+
+commit 606980993c414537a6b12e7b6b01f346236d09e4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:15:24 2016 -0700
+
+    Write simple validations for the Car model.
+
+commit 170c02296f2b79bbe4efb11723840abe04d39c59
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:14:27 2016 -0700
+
+    Write the fields for the Car model.
+
+commit 05276ca9bbbf5aa8569f3688965ec5457083fe09
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:12:37 2016 -0700
+
+    Create files for the Car model migration.
+
+commit df0dbfd536aae8d9c63c2349d41085c5222c10e3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:11:22 2016 -0700
+
+    Write one, sole validation for the body of Comment.
+
+commit 271cf15ce9d39b0b0b6c2b59bc72a62803c41ab0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:09:23 2016 -0700
+
+    Remove the commentable_type field inside the CreateComments.
+
+commit 68088cd0dc38746cc2067aaa4cd65aa008501f16
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:02:18 2016 -0700
+
+    Create files post-Comment generation.
+
+commit 1f7401ead56710a3bf175f20d86ea5240801b715
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 21:00:12 2016 -0700
+
+    Write validations for the Report model.
+
+commit bf50c527e97733f58b22a094efe650956004563b
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:57:03 2016 -0700
+
+    Create fields for the Report model migration.
+
+commit c11718d01e721e6e87cb068b724e0e8fbb3bf979
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:51:25 2016 -0700
+
+    Create files generated from Report model generation.
+
+commit f0208b422b5b03aa5bab2163e9c75c427e05ca61
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:50:39 2016 -0700
+
+    Add presence validation for fields in the ReporType model.
+
+commit 3ba3943bec3a276165473efb85d5bdfc5838daec
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:49:46 2016 -0700
+
+    Write the migration fields for the ReportTypes model.
+
+commit 9f8cba2adddb2202e363b4bd5a35e9e7bb2eced6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:48:18 2016 -0700
+
+    Create files after generation of the ReportType model.
+
+commit 095e55d08c8c4481b14eebd9729786f4e1376ab6
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:47:10 2016 -0700
+
+    Write one, lonely validation for the Ticket model.
+
+commit 54e23e86f98ba1cf4e4cc3a3af4f09f8b44fa9fe
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:46:20 2016 -0700
+
+    Write migration file for our Ticket model.
+
+commit bcaab09527ec4a9365d7b5175dba60ef3d34ae25
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:44:24 2016 -0700
+
+    Create files generated from the Ticket model generation.:
+
+commit 34e61ef01e49dd391b02054694864beb53619803
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:43:17 2016 -0700
+
+    Add presence validations to several fields in the Shop class with the exception of specialties and summary.
+
+commit a8b3270e28bb34b4327775a697f39bad84603946
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:42:11 2016 -0700
+
+    Add a premium field into the Shop class.
+
+commit ffd42d65e1ecc4e645e6b39cbec489353e929c74
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:41:15 2016 -0700
+
+    Remove the change_table from the Model folder into the DB folder.
+
+commit 5934492061b93aafaedb4aecbb1072895829a932
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:40:03 2016 -0700
+
+    Write the migration fields for the Shop model.
+
+commit 705278c78001754bc6bf51c8a7690ecac9c3380a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:35:31 2016 -0700
+
+    Create files from generation of Shop.
+
+commit f074fb453dc9fb6b3efaf4c15f7d40a8288cbade
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:31:27 2016 -0700
+
+    Have a default value for phone if none is supplied.
+
+commit ad6a24184decce4314393b595bdfa5b82dbc9cf3
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:30:49 2016 -0700
+
+    Remove phone presence validation, but add a validation that makes sure that the length of the given phone is 10 to include the area code in US format.
+
+commit 83a4d5ee60aeebdaa65e141070f5c54718e9b9a4
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:28:06 2016 -0700
+
+    Add presence validation for several fields in the User class.
+
+commit dc57ef12b09cef68578549505fb165d148646939
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:26:31 2016 -0700
+
+    Modify the default mail validation.
+
+commit d01fbe12c3d0527f66069ac99673993b484c6635
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:23:53 2016 -0700
+
+    Modify the migration file to include a first_name, a last_name, a phone, and a boolean mech_status.
+
+commit 997ef80d2c9a9037427b1599e05158988677fdf0
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:19:52 2016 -0700
+
+    Change the name of the app inside of our README.
+
+commit 59b950372d395948044f5b9b4f95a54e9a325a75
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:15:29 2016 -0700
+
+    Create files after the devise:user geneation.
+
+commit 73d984af914beb1a6951273c86ab4efbc734547a
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:14:43 2016 -0700
+
+    Routes automatically updated after devise:user generation.
+
+commit 311d84eabe65186c8a0c9e688cdd30a3552052e8
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:13:23 2016 -0700
+
+    Modify to include a default mailer URL.
+
+commit cd8e1ad22dc4157bb498db6acb44a161aa9727af
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:13:01 2016 -0700
+
+    Create DEVISE files after running default generation.
+
+commit ab2f6abaef4afe99e0ad8338725a957155999756
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:11:54 2016 -0700
+
+    Gemfile automatically updated.
+
+commit 829d839a09b99146f21caa803cc9c73b97b7f451
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 20:05:34 2016 -0700
+
+    Update the README.
+
+commit 5d0bc3114d7e5ee6b32813a04eba0ed96ad14ece
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 19:58:50 2016 -0700
+
+    Update the Gemfile to remove -CoffeeScript-- as well as add --Devise - Better_Errors - Awesome_Print - HIRB--
+
+commit 96f7b75806c536ab7d0ab354947bfcccf2317e5e
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 19:50:06 2016 -0700
+
+    Modify the .gitignore file to remove all the useless files that come from working with Macs.
+
+commit ec8679d052734792d072ab174faf851c9e275be5
+Author: Nestor Alvarez <grimreaper1169@gmail.com>
+Date:   Thu Nov 3 19:48:57 2016 -0700
+
+    Initial commit.

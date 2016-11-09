@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.2.2
+services:
+- postgresql
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: AOYy44fkc4Hdc+HZLwnp5eFIckngpHeL0jHIG94bEmjJHnkUKjF8OjfJgf8k0mNwio5P6itV7c/9RHkYH1/7uVFMlAs417nDE+Y23t4qOGQcXaU2OCJlZyQi0EPN/euHYwaX/5DtWLb1l/6WzxxnrmS/xcpeS09I8OnzXiXgN/TeE0s3APHtzkZH4uZH4YfXNbOW1fRqYB90/0VXuUQQZ7VPkPOyYzacgMF7XS2efThvxROoB2DAIPwET0CPZ1QgvkhHUNeIk3KMo9I7AnYwTy05lQR7A2tNV9QQT39X1iXWsTIO12hXF2nRGKHA913r0jnhP3DPKdRwTTOLds3EhX59Qr2YGntSR5bY0JSxGGn3q7GoR4jaE6em6jvQldCO4Gbd6MzfqOKjWyHoM83bpwCenxHjz7mjZovaexXHKHC3y2cy4lPHRUXkqedPUXhW9daZ389GXsFA3JEbdYLOAPUuqMBnzpcbQyf/21jBY9nZw3n1iESTJRXRVLSUZC8T2zwiRaSBlvddRm0HFHFqPjGUJoHMxZsuDbnEZUb0PIfCPJy2Jwe8VaRFGpheuHzHebEcd9NWxMwvv7T1ts+cpUKBdbsPTN7Rdobo1n7xI4dvOzHPJ/ubGu/K5ORvT/ipfz4pWIw8Cl20N4mNeiIObm4YuFjYAh5HhucBxDmcuTU=
+  app: auto-biography
+  on: development
+script:
+- bundle exec rake db:drop
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake

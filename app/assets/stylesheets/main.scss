@@ -1,0 +1,418 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$header-font: 'Lato', sans-serif;
+$merriweather-font: 'Merriweather', serif;
+$blue-accent: #072D3B;
+$gray-accent: #F1F4F8;
+$light-accent: #199CCC;
+$green-accent: #468966;
+$red-accent: #8F2C29;
+$dark-gray-accent: #686B6B;
+$white: #FFFFFF;
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: $gray-accent;
+}
+
+body {
+  padding-top: 60px;
+  font: $font-stack;
+  color: $dark-gray-accent;
+  text-align: center;
+  height: 100%;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+
+.footer, .push {
+height: 4em;
+background-color: $blue-accent;
+}
+
+h1 {
+  margin-top: 50px;
+  color: $dark-gray-accent;
+}
+
+h4 {
+  margin-top: 0px;
+}
+
+.devise-form-div {
+  display: block;
+  text-align: center;
+}
+
+.extra-space {
+  height: 10em;
+}
+
+.devise-form {
+  background-color: $white;
+  width: 25%;
+  display: inline-block;
+  padding: 20px;
+}
+
+form {
+  background-color: $white;
+  width: 25%;
+  display: inline-block;
+  padding: 20px;
+  color: $dark-gray-accent;
+  border: 1px solid #ddd;
+}
+
+ul {
+  text-decoration: none;
+}
+
+.card {
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+}
+
+textarea {
+   resize: none;
+   height: 200px;
+   width: 250px;
+}
+
+.main-h2 { 
+  font-family: $header-font;
+  font-size: 5em;
+  position: absolute; 
+  top: 85px; 
+  width: 100%; 
+  color: $white;
+}
+
+.blue-report-header {
+  background-color: $light-accent;
+  padding: 10px;
+  margin-bottom: 0px;
+  color: $white;
+}
+
+.card {
+  border: 1px solid #ddd;
+  width: 300px;
+}
+
+.opacity-text {
+  background-color:rgba(255,255,255,.6);
+}
+
+.specialtron {
+  height: 300px;
+}
+
+.navbar {
+  height: 80px;
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: $light-accent;
+}
+
+.checkbox {
+  float: right;
+  margin-right: 150px;
+  padding-top: 5px;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+#user_remember_me {
+  margin-right: 10px;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.homepage-col {
+  padding: 20px;
+  background-color: #468966;
+  color: $white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $blue-accent, rgba(0, 0, 0, 0));
+}
+
+/*comprehensive page */
+.maintenance-report {
+  background-color: $green-accent;
+  margin: 0px;
+  color: #FFFFFF;
+}
+
+.x-sm-td {
+  width: 10%;
+}
+
+.sm-td {
+  width: 20%;
+}
+
+.head-td {
+  padding: 20px;
+}
+
+.issues-report {
+  background-color: $red-accent;
+  color: $white;
+}
+
+.md-td {
+  width: 60%;
+  padding: 20px;
+  text-align: left;  
+}
+
+.col-md-4{
+  padding:50px;
+}
+
+.have-none {
+  font-style: italic;
+}
+
+
+/////glyphicons 
+span.glyphicon-list-alt {
+  padding-bottom: 20px;
+  font-size: 3.5em;
+}
+
+span.glyphicon-check {
+  padding-bottom: 20px;
+  font-size: 3.5em;
+}
+
+span.glyphicon-paste {
+ padding-bottom: 20px;
+  font-size: 3.5em;
+}
+
+span.glyphicon-wrench {
+  font-size: .8em;
+}
+
+ .glyphicon-trash {
+  font-size: 1em;
+}
+
+/////
+
+
+.issue-title {
+  font-size: 20px;
+}
+
+#main {
+  overflow:auto;
+  }
+
+////////*tab styling*////////
+/*Do not show grey background (folder style)*/
+
+#fragment-1 {
+  font-family: $header-font;
+  color: $dark-gray-accent;
+}
+
+#fragment-2 {
+  font-family: $header-font;
+  color: $dark-gray-accent;
+}
+
+#tabs .ui-widget-header { border: none; background: none; }
+
+#tabs .ui-tabs-tab {
+  align: center;
+  text-align: center;
+}
+
+#tabs .ui-tabs-nav {
+  float: none; text-align: center;  
+}
+
+#tabs .ui-tabs-nav li {
+  display: inline-block; float: none;  
+}
+
+#tabs .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: #000000;
+}
+
+#tabs .ui-tabs-nav li a {
+  float: none;
+  color: $dark-gray-accent;
+  line-height: 200%;
+} 
+
+#tabs .ui-tabs-nav li a {
+  float: none;
+  color: $dark-gray-accent;
+  line-height: 200%;
+  font-size: 18px;
+} 
+
+#tabs .ui-tabs-panel {
+  min-height: 600px;
+}
+
+///*button styling*////
+
+.btn-primary {
+  background: $light-accent !important;
+  border-color: $light-accent !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: $white;
+}
+
+.btn-primary:link {
+  color: $white;
+}
+
+.btn-secondary {
+  background: $dark-gray-accent!important;
+  border-color: $dark-gray-accent !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.btn-red {
+  background: #8F2C29 !important;
+  border-color: #8F2C29 !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: #FFFFFF !important;
+  }
+
+.btn-red:hover {
+  background-color: #000000, !important;
+  background: #000000, !important;
+}
+
+
+.btn-green {
+  background: #468966 !important;
+  border-color: #468966 !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: #FFFFFF !important;
+}
+
+.btn-back{
+  background: $gray-accent !important;
+  border-color: $green-accent !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: $green-accent !important;
+}
+
+.btn-back-red {
+  background: $red-accent !important;
+  border-color: $white!important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: $white !important;
+}
+
+.btn-back-blue{
+  background: $red-accent !important;
+  border-color: $light-accent !important;
+  border-radius: 5px !important;
+  width: 100px;
+  font-size: 16px;
+  color: $light-accent !important;
+}
+
+.btn-red{
+  background: $red-accent !important;
+  border-color: $red-accent !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: $white !important;
+}
+
+
+.btn-red-outline {
+  background: $gray-accent !important;
+  border-color: $red-accent !important;
+  border-radius: 5px !important;
+  width: 200px;
+  font-size: 16px;
+  color: $red-accent !important;
+}
+
+.btn-reverse{
+  background: $gray-accent !important;
+  border-color: $light-accent !important;
+  border-radius: 5px !important;
+  width: 100px;
+  font-size: 16px;
+  color: $light-accent !important;
+}
+
+.button_to {
+  background-color: $red-accent;
+}
+
+/*Maps page*/
+
+.map-right-side {
+  overflow: auto;
+  color: $dark-gray-accent;
+  height: 60%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;  
+}
+
+.map-left-side {
+  overflow: auto;
+  background-color: $red-accent;
+  color: #FFFFFF;
+  height: 60%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
