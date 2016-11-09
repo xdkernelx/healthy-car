@@ -18,7 +18,6 @@
 	  <%= f.label :description%>:<br>
 	  <%= f.text_area :description %><br />
 	</p>
-	<%= f.hidden_field :repairable, :value => @issue %>
 
 	<%= f.submit "Update Repair", class: "btn btn-primary" %><br><br>
 	<span class="glyphicon glyphicon-trash" aria-hidden="true"></span><%= link_to "Delete", car_issue_repair_path(@car, @issue, :repair => @repair), method: :delete %><br>

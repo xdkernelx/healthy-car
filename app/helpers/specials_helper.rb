@@ -12,6 +12,8 @@ module SpecialsHelper
       else
         # request.host_with_port.to_s + "/specials/?&report_type=#{type.class.name}&issue_id=#{type.id}&car_id=#{car.id}&token=#{@token}"
         issue_tokens.push("localhost:3000" + "/specials/?&report_type=#{type.class.name}&issue_id=#{type.id}&car_id=#{car.id}&token=#{@token}")
+        issue_tokens.push("localhost:3000" + "/cars/#{car.id}/issues/#{type.id}/?&token=#{@token}")
+        issue_tokens
       end
     elsif type.class.name == 'Maintenance'
       @token = SecureRandom.urlsafe_base64
@@ -20,7 +22,9 @@ module SpecialsHelper
         nil
       else
         # request.host_with_port.to_s + "/specials/?&report_type=#{type.class.name}&car_id=#{car.id}&token=#{@token}"
-        "localhost:3000" + "/specials/?&report_type=#{type.class.name}&car_id=#{car.id}&token=#{@token}"
+        issue_tokens.push("localhost:3000" + "/specials/?&report_type=#{type.class.name}&car_id=#{car.id}&token=#{@token}")
+        issue_tokens.push("localhost:3000" + "/cars/#{car.id}/maintenances/?&token=#{@token}")
+        issue_tokens
       end
     else
       nil

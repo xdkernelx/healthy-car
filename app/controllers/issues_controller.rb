@@ -1,5 +1,6 @@
 class IssuesController < ApplicationController
-
+  include SpecialsHelper
+  
   before_action :find_car_and_issue, only: [:show, :edit, :update, :destroy]
   before_action :find_car_and_new_issue, only: [:new]
 

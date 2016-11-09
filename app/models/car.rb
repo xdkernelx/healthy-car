@@ -1,7 +1,7 @@
 require 'securerandom'
 
 class Car < ApplicationRecord
-
+  
   has_many :issues
   has_many :issue_repairs, through: :issues, source: :repairs
   has_many :ticket_repairs, through: :tickets, source: :repairs

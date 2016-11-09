@@ -62,54 +62,10 @@
 
 
 <div class="dashboard-container">
-	<!DOCTYPE html>
-	<html>
 	<head lang="en">
-	    <meta charset="UTF-8">
-	    <title></title>
-	    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
-	    <script src="liquidFillGauge.js" language="JavaScript"></script>
-	    <style>
-	        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
-	    </style>
-	</head>
-	<body>
-	<svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
-	<script language="JavaScript">
-	    var config2 = liquidFillGaugeDefaultSettings();
-	    config2.circleColor = "#D4AB6A";
-	    config2.textColor = "#7D604D";
-	    config2.waveTextColor = "#7D604D";
-	    config2.waveColor = "#3B2D24";
-	    config2.circleThickness = 0.1;
-	    config2.circleFillGap = 0.2;
-	    config2.textVertPosition = 0.8;
-	    config2.waveAnimateTime = 2000;
-	    config2.waveHeight = 0.3;
-	    config2.waveCount = 1;
-      var gauge3 = loadLiquidFillGauge("fillgauge3", (<%= @car.mileage %>/5000)*100, config2);        
-	    var config3 = liquidFillGaugeDefaultSettings();
-
-	    function NewValue(){
-	        if(Math.random() > .5){
-	            return Math.round(Math.random()*100);
-	        } else {
-	            return (Math.random()*100).toFixed(1);
-	        }
-	    }
-	</script>
-	</body>
-	</html>
-
-
-	<head>
-    <title>Speedometer</title>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Play:700,400' type='text/css'>
-    
-    <script type="text/javascript" src="http://iop.io/js/vendor/d3.v3.min.js"></script>
-    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerEvents/pointerevents.js"></script>
-    <script type="text/javascript" src="http://iop.io/js/vendor/polymer/PointerGestures/pointergestures.js"></script>
-    <script type="text/javascript" src="http://iop.io/js/iopctrl.js"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
     
     <style>
         body {
@@ -214,5 +170,29 @@
 
     		console.log(gauge.value);
     </script>
+    <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
+		<script language="JavaScript">
+	    var config2 = liquidFillGaugeDefaultSettings();
+	    config2.circleColor = "#D4AB6A";
+	    config2.textColor = "#7D604D";
+	    config2.waveTextColor = "#7D604D";
+	    config2.waveColor = "#3B2D24";
+	    config2.circleThickness = 0.1;
+	    config2.circleFillGap = 0.2;
+	    config2.textVertPosition = 0.8;
+	    config2.waveAnimateTime = 2000;
+	    config2.waveHeight = 0.3;
+	    config2.waveCount = 1;
+      var gauge3 = loadLiquidFillGauge("fillgauge3", (<%= @car.mileage %>/5000)*100, config2);        
+	    var config3 = liquidFillGaugeDefaultSettings();
+
+	    function NewValue(){
+	        if(Math.random() > .5){
+	            return Math.round(Math.random()*100);
+	        } else {
+	            return (Math.random()*100).toFixed(1);
+	        }
+	    }
+		</script>
 </body>
 </div>

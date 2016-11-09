@@ -19,3 +19,77 @@
 <% else %>
 	<%= @errors %>
 <% end %>
+
+<div class="dashboard-container">
+	<head lang="en">
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
+    
+    <style>
+        body {
+            font: 16px arial;
+        }
+
+        .unselectable {
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* css formats for the gauge */
+        .gauge .domain {
+            stroke-width: 2px;
+            stroke: #5f9ea0;
+        }
+
+        .gauge .tick line {
+            stroke: #5f9ea0;
+            stroke-width: 2px;
+        }
+        
+        .gauge line {
+            stroke: #5f9ea0;
+        }
+
+        .gauge .arc, .gauge .cursor {
+            opacity: 0;
+        }
+
+        .gauge .major {
+            fill: #770000;
+            font-size: 20px;
+            font-family: 'Play', verdana, sans-serif;
+            font-weight: normal;
+        }
+        
+        .gauge .indicator {
+            stroke: #ffd500;
+            fill: #000;
+            stroke-width: 4px;
+        }
+
+        /* css formats for the segment display */
+        .segdisplay .on {
+            fill: #ff8c00;
+
+        }
+
+        .segdisplay .off {
+            fill: #ff8c00;
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="speedometer"></span>
+    </div>
+    
+    <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
+		<script language="JavaScript">
+		</script>
+</body>
+</div>

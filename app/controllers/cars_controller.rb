@@ -1,4 +1,6 @@
 class CarsController < ApplicationController
+	include SpecialsHelper
+	
 	before_action :find_car, only: [:show, :edit, :update, :destroy]
 
 	def index 
